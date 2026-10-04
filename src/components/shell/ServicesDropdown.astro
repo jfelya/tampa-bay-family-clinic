@@ -1,0 +1,56 @@
+---
+import Icon from '../primitives/Icon.astro';
+import type { NavEntry } from '../../data/navigation';
+
+interface Props {
+  item: NavEntry;
+  currentPath: string;
+  id?: string;
+}
+
+const { item, currentPath, id } = Astro.props;
+
+const normalize = (path: string) => path.replace(/\/+$/, '') || '/';
+const children = item.children ?? [];
+const isActive =
+  normalize(currentPath) === normalize(item.href) ||
+  children.some((child) => normalize(child.href) === normalize(currentPath));
+---
+
+<div class="group relative" data-dropdown>
+  <button
+    type="button"
+    id={id}
+    data-dropdown-toggle
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls={`${id}-menu`}
+    class={`inline-flex min-h-[44px] items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition-colors duration-200 ease-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring ${
+      isActive
+        ? 'bg-primary-50 text-primary-700 dark:bg-primary-950 dark:text-primary-200'
+        : 'text-text hover:bg-bg-subtle'
+    }`}
+  >
+    {item.label}
+    <Icon name="chevron-down" size={14} class="transition-transform duration-200 ease-soft group-data-[open]:rotate-180" />
+  </button>
+  <div
+    id={`${id}-menu`}
+    data-dropdown-menu
+    class="invisible absolute left-0 top-full z-50 mt-1 w-72 translate-y-1 rounded-xl border border-border bg-surface p-2 opacity-0 shadow-lift transition-all duration-200 ease-soft group-data-[open]:visible group-data-[open]:translate-y-0 group-data-[open]:opacity-100"
+  >
+    <ul class="space-y-0.5">
+      {children.map((child) => (
+        <li>
+          <a
+            href={child.href}
+            aria-current={normalize(child.href) === normalize(currentPath) ? 'page' : undefined}
+            class="block rounded-lg px-3 py-2.5 text-sm font-medium text-text transition-colors duration-200 ease-soft hover:bg-bg-subtle aria-[current=page]:bg-primary-50 aria-[current=page]:text-primary-700 dark:aria-[current=page]:bg-primary-950 dark:aria-[current=page]:text-primary-200"
+          >
+            {child.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

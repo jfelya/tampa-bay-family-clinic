@@ -1,0 +1,100 @@
+---
+import Icon from './Icon.astro';
+import type { IconName } from '../../lib/icons';
+
+interface Props {
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  type?: 'button' | 'submit';
+  icon?: IconName;
+  iconPosition?: 'left' | 'right';
+  fullWidth?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
+  external?: boolean;
+  class?: string;
+  id?: string;
+  'aria-label'?: string;
+}
+
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  icon,
+  iconPosition = 'left',
+  fullWidth = false,
+  loading = false,
+  disabled = false,
+  external = false,
+  class: className = '',
+  id,
+  'aria-label': ariaLabel,
+  ...rest
+} = Astro.props;
+
+const base =
+  'inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-200 ease-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring disabled:opacity-50 disabled:pointer-events-none';
+
+const variants: Record<NonNullable<Props['variant']>, string> = {
+  primary: 'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800',
+  secondary:
+    'border border-border bg-surface text-text hover:bg-bg-subtle active:bg-ink-100 dark:active:bg-ink-800',
+  accent: 'bg-accent-500 text-accent-ink hover:bg-accent-600 active:bg-accent-700',
+  ghost: 'text-brand hover:bg-primary-50 dark:hover:bg-primary-950/50',
+  link: 'text-brand underline-offset-4 hover:underline !p-0 !min-h-0 !rounded-none',
+};
+
+const sizes: Record<NonNullable<Props['size']>, string> = {
+  sm: 'px-4 py-2 text-sm min-h-[40px]',
+  md: 'px-5 py-2.5 text-sm min-h-[44px]',
+  lg: 'px-7 py-3.5 text-base min-h-[48px]',
+};
+
+const classes = [base, variants[variant], sizes[size], fullWidth ? 'w-full' : '', className]
+  .filter(Boolean)
+  .join(' ');
+---
+
+{href ? (
+  <a
+    href={href}
+    id={id}
+    class={classes}
+    target={external ? '_blank' : undefined}
+    rel={external ? 'noopener noreferrer' : undefined}
+    aria-label={ariaLabel}
+    {...rest}
+  >
+    {loading && (
+      <svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.25" />
+        <path d="M22 12a10 10 0 0 0-10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      </svg>
+    )}
+    {icon && iconPosition === 'left' && !loading && <Icon name={icon} size={18} />}
+    <slot />
+    {icon && iconPosition === 'right' && <Icon name={icon} size={18} />}
+  </a>
+) : (
+  <button
+    type={type}
+    id={id}
+    class={classes}
+    disabled={disabled || loading}
+    aria-label={ariaLabel}
+    {...rest}
+  >
+    {loading && (
+      <svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.25" />
+        <path d="M22 12a10 10 0 0 0-10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      </svg>
+    )}
+    {icon && iconPosition === 'left' && !loading && <Icon name={icon} size={18} />}
+    <slot />
+    {icon && iconPosition === 'right' && <Icon name={icon} size={18} />}
+  </button>
+)}

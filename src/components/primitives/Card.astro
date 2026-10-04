@@ -1,0 +1,23 @@
+---
+interface Props {
+  variant?: 'plain' | 'elevated' | 'outlined';
+  as?: string;
+  href?: string;
+  class?: string;
+}
+
+const { variant = 'outlined', as, href, class: className = '' } = Astro.props;
+
+const variants = {
+  plain: '',
+  elevated: 'bg-surface shadow-soft',
+  outlined: 'border border-border bg-surface',
+};
+
+const classes = `rounded-lg ${variants[variant]} ${className}`;
+const Tag = href ? 'a' : as || 'div';
+---
+
+<Tag href={href} class={classes}>
+  <slot />
+</Tag>

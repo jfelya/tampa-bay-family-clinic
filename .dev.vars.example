@@ -1,0 +1,17 @@
+# ---------------------------------------------------------------------------
+# Cloudflare Pages Function env — LOCAL PLACEHOLDERS ONLY.
+# Copy to `.dev.vars` (git-ignored) for `npm run cf:preview`.
+# Real values go in Cloudflare Pages -> Settings -> Environment variables.
+# See docs/PENDING-ITEMS.md for status.
+# ---------------------------------------------------------------------------
+
+# --- Mailgun (REAL VALUES PENDING) ---
+MAILGUN_API_KEY=key-REPLACE_WITH_REAL_KEY
+MAILGUN_DOMAIN=mg.REPLACE_WITH_REAL_DOMAIN
+MAILGUN_FROM=Tampa Bay Family Clinic <no-reply@REPLACE_WITH_REAL_DOMAIN>
+MAILGUN_TO=info@tampabayfamilyclinics.com
+MAILGUN_BCC=
+
+# --- Cloudflare Turnstile ---
+PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAABiARh9BFmMA1WM_
+TURNSTILE_SECRET_KEY=0xREPLACE_WITH_REAL_SECRET

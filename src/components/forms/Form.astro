@@ -1,0 +1,150 @@
+---
+import Field from '../primitives/Field.astro';
+import Input from '../primitives/Input.astro';
+import Textarea from '../primitives/Textarea.astro';
+import Select from '../primitives/Select.astro';
+import Button from '../primitives/Button.astro';
+import { TIME_SLOTS, ui, type Locale } from '../../i18n/ui';
+
+interface Props {
+  variant: 'appointment' | 'contact';
+  source: string;
+  locale: Locale;
+}
+
+const { variant, source, locale } = Astro.props;
+const t = ui[locale];
+const idp = `form-${source}`;
+const isAppointment = variant === 'appointment';
+const turnstileSiteKey =
+  import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAABiARh9BFmMA1WM_';
+// `placeholder` = validate + simulate success (Mailgun not configured yet).
+// `live` (default) = POST to /api/contact.
+const formsMode = import.meta.env.PUBLIC_FORMS_MODE === 'placeholder' ? 'placeholder' : 'live';
+---
+
+<form
+  id={idp}
+  action="/api/contact"
+  method="post"
+  novalidate
+  data-form
+  data-variant={variant}
+  data-source={source}
+  data-mode={formsMode}
+  data-turnstile-sitekey={turnstileSiteKey}
+  data-msg-required={t.formRequired}
+  data-msg-email={t.formInvalidEmail}
+  data-msg-phone={t.formInvalidPhone}
+  data-msg-captcha={t.formCaptcha}
+  data-msg-sending={t.formSending}
+  data-msg-success={isAppointment ? t.formSuccessAppointment : t.formSuccessContact}
+  data-msg-placeholder={t.formPlaceholderSuccess}
+  data-msg-error={t.formError}
+  class="rounded-xl border border-border bg-surface p-6 shadow-soft sm:p-8"
+>
+  <input type="hidden" name="tbfc_form_source" value={source} />
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <div class="sm:col-span-2">
+      <Field label={t.formFullName} forId={`${idp}-name`} required errorId={`${idp}-name-error`}>
+        <Input
+          id={`${idp}-name`}
+          name="name"
+          type="text"
+          placeholder={t.formFullNamePlaceholder}
+          autocomplete="name"
+          required
+        />
+      </Field>
+    </div>
+
+    <Field label={t.formEmail} forId={`${idp}-email`} required errorId={`${idp}-email-error`}>
+      <Input
+        id={`${idp}-email`}
+        name="email"
+        type="email"
+        placeholder={t.formEmailPlaceholder}
+        autocomplete="email"
+        inputmode="email"
+        required
+      />
+    </Field>
+
+    <Field label={t.formPhone} forId={`${idp}-phone`} required errorId={`${idp}-phone-error`}>
+      <Input
+        id={`${idp}-phone`}
+        name="phone"
+        type="tel"
+        placeholder={t.formPhonePlaceholder}
+        autocomplete="tel"
+        inputmode="tel"
+        required
+      />
+    </Field>
+
+    {isAppointment && (
+      <>
+        <Field label={t.formDesiredDate} forId={`${idp}-date`} required errorId={`${idp}-date-error`}>
+          <Input id={`${idp}-date`} name="appointment_date" type="date" required />
+        </Field>
+
+        <Field label={t.formDesiredTime} forId={`${idp}-time`} required errorId={`${idp}-time-error`}>
+          <Select
+            id={`${idp}-time`}
+            name="appointment_time"
+            options={TIME_SLOTS}
+            placeholder={t.formSelectTime}
+            required
+          />
+        </Field>
+      </>
+    )}
+
+    <div class="sm:col-span-2">
+      <Field
+        label={t.formMessage}
+        forId={`${idp}-message`}
+        required={!isAppointment}
+        optionalLabel={isAppointment ? t.formOptional : undefined}
+        errorId={`${idp}-message-error`}
+      >
+        <Textarea
+          id={`${idp}-message`}
+          name="message"
+          rows={4}
+          placeholder={t.formMessagePlaceholder}
+          required={!isAppointment}
+        />
+      </Field>
+    </div>
+  </div>
+
+  {turnstileSiteKey && (
+    <div
+      data-turnstile
+      class="mt-5 min-h-[65px] rounded-md border border-dashed border-border px-4 py-4 text-center text-xs text-text-muted"
+    >
+      {t.formTurnstileLabel}
+    </div>
+  )}
+
+  <p class="mt-4 text-xs text-text-muted">{t.formRequiredNote}</p>
+
+  <Button
+    type="submit"
+    variant="accent"
+    size="lg"
+    fullWidth
+    class="mt-4"
+    data-form-submit
+  >
+    {isAppointment ? t.formSubmitAppointment : t.formSubmitContact}
+  </Button>
+
+  <p
+    data-form-status
+    role="status"
+    class="mt-4 hidden rounded-md px-4 py-3 text-sm font-medium data-[kind=success]:bg-success-subtle data-[kind=success]:text-success data-[kind=error]:bg-error-subtle data-[kind=error]:text-error"
+  ></p>
+</form>

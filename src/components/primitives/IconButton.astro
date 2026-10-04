@@ -1,0 +1,43 @@
+---
+import Icon from './Icon.astro';
+import type { IconName } from '../../lib/icons';
+
+interface Props {
+  label: string;
+  icon: IconName;
+  size?: 'sm' | 'md';
+  class?: string;
+  id?: string;
+  variant?: 'plain' | 'outlined';
+}
+
+const {
+  label,
+  icon,
+  size = 'md',
+  class: className = '',
+  id,
+  variant = 'plain',
+  ...rest
+} = Astro.props;
+
+const sizes = {
+  sm: 'h-9 w-9',
+  md: 'h-11 w-11',
+};
+
+const variants = {
+  plain: 'hover:bg-ink-100 dark:hover:bg-ink-800',
+  outlined: 'border border-border hover:bg-bg-subtle',
+};
+---
+
+<button
+  type="button"
+  id={id}
+  aria-label={label}
+  class={`inline-flex shrink-0 items-center justify-center rounded-lg text-text transition-colors duration-200 ease-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring ${sizes[size]} ${variants[variant]} ${className}`}
+  {...rest}
+>
+  <Icon name={icon} size={20} />
+</button>

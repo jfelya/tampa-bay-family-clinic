@@ -1,0 +1,557 @@
+{
+  "url": "https://www.tampabayfamilyclinics.com/es/pruebas-de-covid-19/",
+  "lang": "es",
+  "title": "Pruebas de COVID-19 - Tampa Bay Family Clinic",
+  "description": "Tampa Bay Family Clinics proporciona pruebas de COVID-19 accesibles a la comunidad. Las pruebas son observadas y dirigidas por un trabajador de la salud.",
+  "canonical": "https://www.tampabayfamilyclinics.com/es/pruebas-de-covid-19/",
+  "outline": [
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Tampa Florida"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pruebas de Covid-19"
+    },
+    {
+      "kind": "text",
+      "text": "La prueba es la única forma en que podemos confirmar si tiene COVID-19. Saber que está infectado es importante para proteger a su familia y a las personas con las que se encuentra. Las pruebas ayudan a reducir la propagación del virus. Cuando alguien da positivo por COVID-19, puede aislarse en su casa o, si es necesario, en un hospital."
+    },
+    {
+      "kind": "text",
+      "text": "Una cosa que sabemos con certeza y es que cada persona puede ayudar a nuestro país a controlar la pandemia de COVID-19. Desde usar una máscara hasta lavarse las manos, mantener la distancia física y evitar grandes reuniones en interiores."
+    },
+    {
+      "kind": "text",
+      "text": "Una prueba positiva alerta a una persona de que tiene la infección. No solo pueden recibir tratamiento más rápido, sino que también pueden tomar medidas para minimizar la propagación del virus. Por eso es tan importante obtener los resultados de la prueba rápidamente."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Tienes algunos"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "de estos síntomas?"
+    },
+    {
+      "kind": "text",
+      "text": "Tos"
+    },
+    {
+      "kind": "text",
+      "text": "Dificultad para respirar"
+    },
+    {
+      "kind": "text",
+      "text": "Fatiga"
+    },
+    {
+      "kind": "text",
+      "text": "Dolor de cuerpo"
+    },
+    {
+      "kind": "text",
+      "text": "Headache"
+    },
+    {
+      "kind": "text",
+      "text": "Dolor de cabeza"
+    },
+    {
+      "kind": "text",
+      "text": "Fiebre"
+    },
+    {
+      "kind": "text",
+      "text": "Dolor de garganta"
+    },
+    {
+      "kind": "text",
+      "text": "Pérdida del gusto o del olfato"
+    },
+    {
+      "kind": "text",
+      "text": "Náuseas"
+    },
+    {
+      "kind": "text",
+      "text": "Congestión"
+    },
+    {
+      "kind": "text",
+      "text": "Escalofríos"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Necesita una prueba de COVID-19?"
+    },
+    {
+      "kind": "heading",
+      "level": 3,
+      "text": "Razones para hacerse la prueba"
+    },
+    {
+      "kind": "listItem",
+      "text": "Si tiene síntomas de COVID-19"
+    },
+    {
+      "kind": "listItem",
+      "text": "Al menos 5 días después de un contacto cercano conocido o sospechado con COVID-19"
+    },
+    {
+      "kind": "listItem",
+      "text": "Para detección (escuelas, lugares de trabajo, entornos de congregación, etc.)"
+    },
+    {
+      "kind": "listItem",
+      "text": "Antes y después de viajar"
+    },
+    {
+      "kind": "listItem",
+      "text": "Cuando lo solicite un profesional de la salud o un funcionario de salud pública"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Tipos de pruebas virales"
+    },
+    {
+      "kind": "heading",
+      "level": 3,
+      "text": "Prueba de laboratorio"
+    },
+    {
+      "kind": "listItem",
+      "text": "La muestra puede ser un hisopo nasal o saliva"
+    },
+    {
+      "kind": "listItem",
+      "text": "Resultados generalmente en 1-3 días"
+    },
+    {
+      "kind": "listItem",
+      "text": "Los resultados son confiables para personas con y sin síntomas."
+    },
+    {
+      "kind": "listItem",
+      "text": "No se requiere prueba de seguimiento"
+    },
+    {
+      "kind": "listItem",
+      "text": "Ejemplo común: prueba PCR"
+    },
+    {
+      "kind": "heading",
+      "level": 3,
+      "text": "Prueba rápida"
+    },
+    {
+      "kind": "listItem",
+      "text": "La muestra suele ser un hisopo nasal"
+    },
+    {
+      "kind": "listItem",
+      "text": "Resultados generalmente en 15-30 minutos"
+    },
+    {
+      "kind": "listItem",
+      "text": "Los resultados pueden ser menos fiables para las personas sin síntomas"
+    },
+    {
+      "kind": "listItem",
+      "text": "Es posible que se requiera una prueba de seguimiento"
+    },
+    {
+      "kind": "listItem",
+      "text": "Ejemplo común: prueba de antígeno"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Acciones después del resultado"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Si resultado positivo"
+    },
+    {
+      "kind": "listItem",
+      "text": "Aislar durante al menos 5 días. Obtenga más información sobre los plazos y las precauciones de aislamiento"
+    },
+    {
+      "kind": "listItem",
+      "text": "Busque una prueba de laboratorio de seguimiento confirmatoria si lo recomienda un profesional de la salud"
+    },
+    {
+      "kind": "listItem",
+      "text": "Controle sus síntomas"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Si resultado negativo"
+    },
+    {
+      "kind": "listItem",
+      "text": "Si está al día con las vacunas: regreso a las actividades normales. Use una máscara en interiores en áreas donde el nivel comunitario de COVID-19 es alto."
+    },
+    {
+      "kind": "listItem",
+      "text": "Si no está al día con las vacunas y tiene síntomas o exposición: cuarentena por al menos 5 días."
+    },
+    {
+      "kind": "listItem",
+      "text": "Si no está al día con las vacunas y no tiene síntomas o exposición: regrese a sus actividades normales. Tome medidas para ponerse al día con las vacunas para protegerse a sí mismo y a los demás."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-rapid-testing-Tampa-Florida-2-af529c32c1.webp",
+      "alt": "",
+      "width": "900",
+      "height": "600"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-lab-testing-Tampa-Florida-2-5001569033.webp",
+      "alt": "COVID-19 Testing covid-19-lab-testing-Tampa-Florida-2",
+      "width": "900",
+      "height": "600"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Qué es el coronavirus (COVID-19)?"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El coronavirus son un tipo de virus. Hay muchos tipos diferentes, y algunos causan enfermedades. Un coronavirus identificado en 2019, SARS-CoV-2, ha causado una pandemia de enfermedades respiratorias, llamada COVID-19."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Cómo se propaga el COVID-19?"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Hasta ahora, los investigadores saben que el coronavirus se transmite a través de partículas y gotitas de virus que se liberan en el aire cuando una persona infectada tose, habla, respira, estornuda, ríe o canta. Las gotas más grandes pueden caer al suelo en unos pocos segundos, pero las pequeñas partículas infecciosas pueden permanecer en el aire y acumularse en lugares cerrados, principalmente donde hay poca ventilación y se reúne mucha gente. Por eso, el distanciamiento físico, la higiene de manos y el uso de mascarillas son cruciales para prevenir el COVID-19."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Cómo comenzó el coronavirus?"
+    },
+    {
+      "kind": "paragraph",
+      "text": "El primer caso de COVID-19 se informó el 1 de diciembre de 2019 y la causa fue un nuevo coronavirus que luego se denominó SARS-CoV-2. El SARS-CoV-2 puede haberse originado en un animal y cambiado (mutado), por lo que podría causar enfermedades en los humanos. En el pasado, la aparición repentina de algunas enfermedades infecciosas se ha rastreado hasta virus que se originaron en murciélagos, pájaros, cerdos y otros animales que mutaron para volverse asesinos para los humanos. La investigación continúa, y más estudios pueden revelar por qué y cómo evolucionó el coronavirus para causar una enfermedad pandémica."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-testing-Tampa-Florida-2.2-ed41123eca.webp",
+      "alt": "COVID-19 Testing covid-19-testing-Tampa-Florida-2.2",
+      "width": "900",
+      "height": "601"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Qué esperar durante su prueba de Covid-19 en Tampa, Florida"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Para una prueba de diagnóstico de COVID-19, nuestro especialista en atención médica toma una muestra de saliva o una muestra de mucosidad de su nariz o garganta."
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Muestra de saliva"
+    },
+    {
+      "kind": "text",
+      "text": "Pocos lugares ofrecen pruebas de saliva. Si bien una muestra de saliva puede ser un poco menos perceptiva que una muestra de moco tomada con un hisopo nasal largo, una prueba de saliva es más fácil de hacer y, a menudo, menos desagradable. Usted escupe en un tubo varias veces para proporcionar una muestra de su saliva para analizarla. El tubo se sella antes de enviarlo a un laboratorio para su análisis."
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Hisopos de nariz o garganta"
+    },
+    {
+      "kind": "text",
+      "text": "Se recomienda un hisopo nasal largo (hisopo nasofaríngeo), aunque es aceptable un hisopo nasal más corto o muy corto o un hisopo de garganta. Nuestro profesional de la salud inserta un palito delgado y flexible con cepillos de algodón en la parte posterior de la garganta o en la punta dentro de la nariz para recolectar una muestra de moco."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Cuánto dura el proceso de prueba de COVID-19?"
+    },
+    {
+      "kind": "paragraph",
+      "text": "La recolección de la muestra para la prueba de COVID-19 solo tomará entre 5 y 15 minutos como máximo. Estarás dentro y fuera."
+    },
+    {
+      "kind": "heading",
+      "level": 3,
+      "text": "Di positivo; ¿Qué debo hacer?"
+    },
+    {
+      "kind": "listItem",
+      "text": "Quédate en casa."
+    },
+    {
+      "kind": "listItem",
+      "text": "Aíslese de otras personas."
+    },
+    {
+      "kind": "listItem",
+      "text": "Descanse lo suficiente y manténgase hidratado."
+    },
+    {
+      "kind": "listItem",
+      "text": "Siempre use una máscara para cubrirse la boca y la nariz cuando esté cerca de otras personas."
+    },
+    {
+      "kind": "listItem",
+      "text": "Lávese siempre las manos, especialmente antes de preparar alimentos o después de toser."
+    },
+    {
+      "kind": "listItem",
+      "text": "Evite tocarse la cara con las manos sucias."
+    },
+    {
+      "kind": "listItem",
+      "text": "Evite compartir artículos personales como tazas, utensilios, toallas, etc."
+    },
+    {
+      "kind": "listItem",
+      "text": "Siempre limpie y desinfecte la habitación en la que se hospeda."
+    },
+    {
+      "kind": "listItem",
+      "text": "Controle sus síntomas."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "¿Crees que has sido infectado con Covid-19?"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Déjanos ayudarte a quitarte esa preocupación. Asegúrese de conocer su estado de salud a tiempo. Obtenga el servicio de prueba COVID-19 de Tampa Bay Family Clinic en Tampa, Florida"
+    },
+    {
+      "kind": "link",
+      "href": "tel:8139332880",
+      "text": "OBTENER UNA PRUEBA"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Servicios - Tampa Bay Family Clinic"
+    },
+    {
+      "kind": "link",
+      "href": "/es/cuidados-primarios/",
+      "text": "Cuidado Primario"
+    },
+    {
+      "kind": "link",
+      "href": "/es/pruebas-de-laboratorio/",
+      "text": "Pruebas De Laboratorio"
+    },
+    {
+      "kind": "link",
+      "href": "/es/examen-fisico-dot/",
+      "text": "Examen Físico DOT"
+    },
+    {
+      "kind": "link",
+      "href": "/es/examen-medico-de-inmigracion/",
+      "text": "Examen Médico De Inmigración"
+    },
+    {
+      "kind": "link",
+      "href": "/es/pruebas-de-covid-19/",
+      "text": "Pruebas de Covid-19"
+    },
+    {
+      "kind": "link",
+      "href": "/es/medicos-de-marihuana-medicinal/",
+      "text": "Médicos De Marihuana Medicinal"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Contáctate con nosotros"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-phone-3-a4103f466b.webp",
+      "alt": "",
+      "width": "75",
+      "height": "75"
+    },
+    {
+      "kind": "text",
+      "text": "Llámenos en cualquier momento"
+    },
+    {
+      "kind": "text",
+      "text": "(813) 933-2880"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-Email-1d488d1510.webp",
+      "alt": "",
+      "width": "75",
+      "height": "75"
+    },
+    {
+      "kind": "text",
+      "text": "Escríbenos"
+    },
+    {
+      "kind": "text",
+      "text": "info@tampabayfamilyclinics.com"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Socilitar una cita"
+    },
+    {
+      "kind": "text",
+      "text": "Solicite una visita a Tampa Bay Family Clinic, simplemente complete el formulario a continuación y nos pondremos en contacto con usted con respecto al servicio que necesita."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Tu Centro de"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Salud Familiar"
+    },
+    {
+      "kind": "link",
+      "href": "/es/nuestros-servicios/",
+      "text": "Ver Nuestros Servicios"
+    },
+    {
+      "kind": "link",
+      "href": "/es/cuidados-primarios/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-2-57d18444af.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Cuidado Primario"
+    },
+    {
+      "kind": "text",
+      "text": "Reciba los servicios médicos que necesita con nuestra atención primaria."
+    },
+    {
+      "kind": "link",
+      "href": "/es/pruebas-de-laboratorio/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-3-83cb299fd7.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Pruebas De Laboratorio"
+    },
+    {
+      "kind": "text",
+      "text": "¡Hacerse una prueba de laboratorio es fácil! En general, podrá entrar y salir en 15 minutos. Resultados de la prueba accesibles dentro de las 24-72 horas."
+    },
+    {
+      "kind": "link",
+      "href": "/es/medicos-de-marihuana-medicinal/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-09-drop-cannabis-medicinal-white-5a7df37803.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Médicos De Marihuana Medicinal"
+    },
+    {
+      "kind": "text",
+      "text": "Si está interesado en obtener su tarjeta de marihuana medicinal pero no está seguro de qué esperar, está en el lugar correcto."
+    },
+    {
+      "kind": "link",
+      "href": "/es/examen-medico-de-inmigracion/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-inmigration-medical-exam-2-fdb2abd0e7.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Examen Médico De Inmigración"
+    },
+    {
+      "kind": "text",
+      "text": "Brindamos todos los servicios médicos para cumplir con los requisitos del examen de inmigración."
+    },
+    {
+      "kind": "text",
+      "text": "Copyright 2026 by Tampa Bay Family Clinic. All rights reserved."
+    },
+    {
+      "kind": "link",
+      "href": "/our-services/",
+      "text": "OUR SERVICES"
+    },
+    {
+      "kind": "link",
+      "href": "/insurances-accepted/",
+      "text": "INSURANCES ACCEPTED"
+    },
+    {
+      "kind": "link",
+      "href": "/our-providers/",
+      "text": "OUR PROVIDERS"
+    },
+    {
+      "kind": "link",
+      "href": "/contact-us/",
+      "text": "CONTACT US"
+    },
+    {
+      "kind": "link",
+      "href": "/#top",
+      "text": "BACK TO TOP"
+    }
+  ]
+}

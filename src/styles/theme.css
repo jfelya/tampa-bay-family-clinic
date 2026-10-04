@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Design tokens — Phase 1 Component Library spec (approved palette)
+   Light + dark share one source of truth. Components consume tokens only.
+   ========================================================================== */
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* --- Theme surface aliases (semantic, theme-aware) ---------------------- */
+:root {
+  color-scheme: light;
+
+  --bg: #f4f8fb;
+  --bg-subtle: #e7eff6;
+  --surface: #ffffff;
+  --border: #d7e2ec;
+  --text: #0f172a;
+  --text-muted: #475569;
+
+  --primary: #0069a7;
+  --primary-hover: #00568a;
+  --accent: #f7be00;
+  --accent-hover: #d99e00;
+  --accent-ink: #462b02;
+  --focus-ring: #0069a7;
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --error: #dc2626;
+  --info: #0284c7;
+  --success-subtle: #f0fdf4;
+  --warning-subtle: #fffbeb;
+  --error-subtle: #fef2f2;
+  --info-subtle: #f0f9ff;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0b1220;
+  --bg-subtle: #0f172a;
+  --surface: #111c2e;
+  --border: #1e293b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  --primary: #48a5d6;
+  --primary-hover: #83c4e6;
+  --accent: #ffd246;
+  --accent-hover: #ffe685;
+  --accent-ink: #462b02;
+  --focus-ring: #83c4e6;
+
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --info: #38bdf8;
+  --success-subtle: #052e16;
+  --warning-subtle: #451a03;
+  --error-subtle: #450a0a;
+  --info-subtle: #082f49;
+}
+
+/* --- Static scales + design tokens exposed to Tailwind ------------------- */
+@theme {
+  /* Primary — trust blue (evolves #0069A7) */
+  --color-primary-50: #eef7fc;
+  --color-primary-100: #d9edf8;
+  --color-primary-200: #b6dcf1;
+  --color-primary-300: #83c4e6;
+  --color-primary-400: #48a5d6;
+  --color-primary-500: #1f87c0;
+  --color-primary-600: #0069a7;
+  --color-primary-700: #00568a;
+  --color-primary-800: #074873;
+  --color-primary-900: #0b3d60;
+  --color-primary-950: #07273f;
+
+  /* Accent — warm yellow (evolves #F7BE00) */
+  --color-accent-50: #fffbea;
+  --color-accent-100: #fff3c4;
+  --color-accent-200: #ffe685;
+  --color-accent-300: #ffd246;
+  --color-accent-400: #ffbe1b;
+  --color-accent-500: #f7be00;
+  --color-accent-600: #d99e00;
+  --color-accent-700: #b47a02;
+  --color-accent-800: #935e08;
+  --color-accent-900: #794d0b;
+  --color-accent-950: #462b02;
+
+  /* Neutral — slate */
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
+  --color-ink-950: #020617;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, sans-serif;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-soft: 0 1px 2px rgb(2 6 23 / 0.06), 0 4px 12px rgb(2 6 23 / 0.08);
+  --shadow-lift: 0 12px 32px rgb(2 6 23 / 0.12);
+
+  /* Layout */
+  --container-content: 1200px;
+
+  /* Motion — smooth and subtle, never flashy */
+  --ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Semantic aliases (inline so they follow [data-theme] at runtime) */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+
+  --color-brand: var(--primary);
+  --color-brand-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  --color-success-subtle: var(--success-subtle);
+  --color-warning-subtle: var(--warning-subtle);
+  --color-error-subtle: var(--error-subtle);
+  --color-info-subtle: var(--info-subtle);
+
+  --color-focus-ring: var(--focus-ring);
+}

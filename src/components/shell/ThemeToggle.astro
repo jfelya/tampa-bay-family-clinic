@@ -1,0 +1,29 @@
+---
+import Icon from '../primitives/Icon.astro';
+import { ui, type Locale } from '../../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  variant?: 'dark' | 'light';
+  id?: string;
+}
+
+const { locale, variant = 'dark', id } = Astro.props;
+const t = ui[locale];
+
+const styles =
+  variant === 'dark'
+    ? 'text-primary-200 hover:bg-white/10 hover:text-white'
+    : 'text-text-muted hover:bg-bg-subtle hover:text-text';
+---
+
+<button
+  type="button"
+  id={id}
+  data-theme-toggle
+  aria-label={t.toggleTheme}
+  class={`inline-flex h-9 w-9 items-center justify-center rounded-lg transition-colors duration-200 ease-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring ${styles}`}
+>
+  <Icon name="moon" size={18} class="block dark:hidden" />
+  <Icon name="sun" size={18} class="hidden dark:block" />
+</button>

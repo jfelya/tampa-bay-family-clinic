@@ -1,0 +1,21 @@
+---
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import { md } from '../../lib/markdown';
+
+interface Props {
+  heading?: string;
+  body: string;
+  container?: 'default' | 'narrow';
+  tone?: 'default' | 'subtle';
+}
+
+const { heading, body, container = 'narrow', tone = 'default' } = Astro.props;
+---
+
+<Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container size={container}>
+    {heading && <h2 class="mb-6">{heading}</h2>}
+    <div class="prose-tbfc max-w-none" set:html={md(body)} />
+  </Container>
+</Section>

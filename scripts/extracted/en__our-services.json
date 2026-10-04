@@ -1,0 +1,329 @@
+{
+  "url": "https://www.tampabayfamilyclinics.com/our-services/",
+  "lang": "en",
+  "title": "Our Services - Tampa Bay Family Clinic",
+  "description": "Our services objective is to work in partnership with the community to promote and protect the health and social well-being in the State of Florida.",
+  "canonical": "https://www.tampabayfamilyclinics.com/our-services/",
+  "outline": [
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Our Services"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-testing-Tampa-Florida-f9094178c6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "COVID-19 Testing"
+    },
+    {
+      "kind": "text",
+      "text": "Tampa Bay Family Clinic provides convenient and affordable COVID-19 testing."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Ekg-Lab-Test-Tampa-Florida-4-ae0fda6c47.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "EKG Lab Test"
+    },
+    {
+      "kind": "text",
+      "text": "Prevent, detect, monitor, and treat heart conditions. We'll help you take care of your heart."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Spirometry-Test-Florida-Tampa-93e95cf865.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Spirometry Test"
+    },
+    {
+      "kind": "text",
+      "text": "Start breathing better and naturally with our spirometry screening and prevention test."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Pregnancy-Tests-Tampa-Florida-3-348ce219a3.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pregnancy Tests"
+    },
+    {
+      "kind": "text",
+      "text": "A pregnancy test can tell whether you are pregnant by checking for a specific hormone in your body."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-2-fe208d5b4c.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Blood Testing"
+    },
+    {
+      "kind": "text",
+      "text": "We perform blood tests needed to keep track of your overall physical well-being."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-drug-test-tampa-florida-d8f88161a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Drug Testing"
+    },
+    {
+      "kind": "text",
+      "text": "We make sure that our drug tests are done properly by trained healthcare professionals."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-pap-smear-test-tampa-florida-5c987421db.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pap Smear Tests"
+    },
+    {
+      "kind": "text",
+      "text": "Detecting cervical cancer early with a Pap smear gives you a greater chance of a cure."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Prenatal-Tests-Tampa-Florida-0932d1a178.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Prenatal Tests"
+    },
+    {
+      "kind": "text",
+      "text": "With screening and diagnostic tests, we can provide information about your baby's health."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-client-satisfation-2-2-652ad27de9.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "99%"
+    },
+    {
+      "kind": "text",
+      "text": "Client Satisfaction"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-Happy-with-Staff-2-3-274e8fe1b0.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "97%"
+    },
+    {
+      "kind": "text",
+      "text": "Accurate Results"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-Happy-with-Staff-2-2-bb3eb29ec8.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "100%"
+    },
+    {
+      "kind": "text",
+      "text": "Happy with Staff"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-health-maintenance-2-5d12d9053c.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "95%"
+    },
+    {
+      "kind": "text",
+      "text": "Health Maintenance"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "More"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Services"
+    },
+    {
+      "kind": "link",
+      "href": "/primary-care/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Primary Care"
+    },
+    {
+      "kind": "text",
+      "text": "Receive the medical services you need with our primary care."
+    },
+    {
+      "kind": "link",
+      "href": "/laboratory-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Lab Testing"
+    },
+    {
+      "kind": "text",
+      "text": "Getting a lab test is easy! Mostly, we'll have you in and out in 15 minutes. Test results accessible within 24-72 hours."
+    },
+    {
+      "kind": "link",
+      "href": "/medical-marijuana-doctors/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-09-drop-cannabis-medicinal-blue-2ed52c8ecf.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Medical Marijuana Doctors"
+    },
+    {
+      "kind": "text",
+      "text": "If you are interested in getting your medical marijuana card but unsure what to expect, you are in the right place."
+    },
+    {
+      "kind": "link",
+      "href": "/immigration-medical-exam-tampa/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-inmigration-medical-exam-a3af222af7.webp",
+      "alt": "",
+      "width": "45",
+      "height": "45"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Immigration Medical Exam"
+    },
+    {
+      "kind": "text",
+      "text": "We provide all the medical services to meet the requirements of the immigration exam."
+    },
+    {
+      "kind": "text",
+      "text": "Copyright 2026 by Tampa Bay Family Clinic. All rights reserved."
+    },
+    {
+      "kind": "link",
+      "href": "/our-services/",
+      "text": "OUR SERVICES"
+    },
+    {
+      "kind": "link",
+      "href": "/insurances-accepted/",
+      "text": "INSURANCES ACCEPTED"
+    },
+    {
+      "kind": "link",
+      "href": "/our-providers/",
+      "text": "OUR PROVIDERS"
+    },
+    {
+      "kind": "link",
+      "href": "/contact-us/",
+      "text": "CONTACT US"
+    },
+    {
+      "kind": "link",
+      "href": "/#top",
+      "text": "BACK TO TOP"
+    }
+  ]
+}

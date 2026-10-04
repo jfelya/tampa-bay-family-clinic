@@ -1,0 +1,28 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  options: readonly string[] | { value: string; label: string }[];
+  placeholder?: string;
+  required?: boolean;
+  class?: string;
+}
+
+const { id, name, options, placeholder, required = false, class: className = '' } = Astro.props;
+
+const normalized = options.map((option) =>
+  typeof option === 'string' ? { value: option, label: option } : option
+);
+---
+
+<select
+  id={id}
+  name={name}
+  required={required}
+  aria-invalid="false"
+  aria-describedby={`${id}-error`}
+  class={`w-full appearance-none rounded-md border border-border bg-surface px-3.5 py-2.5 pr-10 text-text shadow-sm transition-colors duration-200 ease-soft focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 aria-[invalid=true]:border-error ${className}`}
+>
+  {placeholder && <option value="">{placeholder}</option>}
+  {normalized.map((option) => <option value={option.value}>{option.label}</option>)}
+</select>

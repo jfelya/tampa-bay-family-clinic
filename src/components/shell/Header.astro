@@ -1,0 +1,117 @@
+---
+import Container from '../primitives/Container.astro';
+import Button from '../primitives/Button.astro';
+import Icon from '../primitives/Icon.astro';
+import IconButton from '../primitives/IconButton.astro';
+import LanguageToggle from './LanguageToggle.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import ServicesDropdown from './ServicesDropdown.astro';
+import MobileDrawer from './MobileDrawer.astro';
+import { navigation } from '../../data/navigation';
+import { site } from '../../data/site';
+import { ui, type Locale } from '../../i18n/ui';
+import logo from '../../assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-logo-2-d15855e3b8.webp';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+  alternateHref: string;
+  hasAppointmentForm?: boolean;
+}
+
+const { locale, currentPath, alternateHref, hasAppointmentForm = false } = Astro.props;
+const t = ui[locale];
+const info = site[locale];
+const nav = navigation[locale];
+const homeHref = locale === 'en' ? '/' : '/es/inicio/';
+const contactHref = locale === 'en' ? '/contact-us/' : '/es/contactanos/';
+const appointmentHref = hasAppointmentForm ? '#appointment' : contactHref;
+
+const normalize = (path: string) => path.replace(/\/+$/, '') || '/';
+const isActive = (href: string) => normalize(href) === normalize(currentPath);
+---
+
+<!--
+  The top header (logo + phone/hours) and the nav bar are SEPARATE siblings so the
+  nav bar can stick for the whole page. The top header scrolls away on desktop and
+  stays pinned on mobile (so the menu button is always reachable).
+-->
+<header
+  class="sticky top-0 z-40 border-b border-border bg-surface/95 backdrop-blur lg:static"
+  data-top-bar
+>
+  <Container class="flex h-16 items-center justify-between gap-4 lg:h-20">
+    <a href={homeHref} class="inline-flex shrink-0 items-center" aria-label={info.name}>
+      <span class="inline-flex rounded-md bg-white p-1 ring-1 ring-ink-900/10">
+        <img src={logo.src} alt={info.name} width="180" height="98" class="h-9 w-auto lg:h-12" />
+      </span>
+    </a>
+
+    <div class="flex items-center gap-2 sm:gap-4">
+      <a
+        href={info.phoneHref}
+        class="hidden items-center gap-2 text-sm font-semibold text-text transition-colors duration-200 ease-soft hover:text-brand lg:inline-flex"
+      >
+        <Icon name="phone" size={18} class="text-brand" />
+        {info.phone}
+      </a>
+      <span class="hidden items-center gap-2 text-sm text-text-muted lg:inline-flex">
+        <Icon name="clock" size={18} class="text-brand" />
+        {info.hours}
+      </span>
+
+      <IconButton
+        id="menuToggle"
+        label={t.openMenu}
+        icon="menu"
+        variant="outlined"
+        class="lg:hidden"
+        data-drawer-toggle
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      />
+    </div>
+  </Container>
+</header>
+
+<!-- Sticky nav bar: only links + language/theme + appointment. Desktop only. -->
+<nav
+  aria-label={t.primaryNavigation}
+  class="sticky top-0 z-40 hidden border-b border-border bg-surface/95 backdrop-blur lg:block"
+  data-nav-bar
+>
+  <Container class="flex h-14 items-center justify-between gap-4">
+    <div class="flex items-center gap-1">
+      {nav.primary.map((item) =>
+        item.children ? (
+          <ServicesDropdown item={item} currentPath={currentPath} id={`nav-${locale}-services`} />
+        ) : (
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+            class="inline-flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-semibold text-text transition-colors duration-200 ease-soft hover:bg-bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring aria-[current=page]:bg-primary-100 aria-[current=page]:text-primary-800 dark:aria-[current=page]:bg-primary-950 dark:aria-[current=page]:text-primary-200"
+          >
+            {item.label}
+          </a>
+        )
+      )}
+    </div>
+
+    <div class="flex items-center gap-2">
+      <LanguageToggle locale={locale} href={alternateHref} variant="light" />
+      <ThemeToggle locale={locale} variant="light" />
+      <Button href={appointmentHref} size="md" icon="calendar" data-appointment-link>
+        {t.requestAppointment}
+      </Button>
+    </div>
+  </Container>
+</nav>
+
+<MobileDrawer locale={locale} currentPath={currentPath} alternateHref={alternateHref} />
+
+<script>
+  import { initMenu } from '../../scripts/menu';
+  import { initAppointmentJump } from '../../scripts/form';
+  initMenu();
+  initAppointmentJump();
+</script>

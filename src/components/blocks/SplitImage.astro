@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import Button from '../primitives/Button.astro';
+import Icon from '../primitives/Icon.astro';
+import { md } from '../../lib/markdown';
+import { requireAsset } from '../../lib/assets';
+
+interface Action {
+  label: string;
+  href: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
+  icon?: string;
+}
+
+interface Props {
+  heading: string;
+  body: string;
+  image: string;
+  imageAlt?: string;
+  imagePosition?: 'left' | 'right';
+  bullets?: string[];
+  actions?: Action[];
+  tone?: 'default' | 'subtle';
+}
+
+const {
+  heading,
+  body,
+  image,
+  imageAlt = '',
+  imagePosition = 'right',
+  bullets = [],
+  actions = [],
+  tone = 'default',
+} = Astro.props;
+
+const imageData = requireAsset(image);
+const imageFirst = imagePosition === 'left';
+---
+
+<Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div class={imageFirst ? 'lg:order-2' : ''}>
+      <h2>{heading}</h2>
+      <div class="prose-tbfc mt-4 max-w-none" set:html={md(body)} />
+      {bullets.length > 0 && (
+        <ul class="mt-6 space-y-3">
+          {bullets.map((bullet) => (
+            <li class="flex gap-3 text-text">
+              <Icon name="check" size={20} class="mt-0.5 shrink-0 text-brand" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {actions.length > 0 && (
+        <div class="mt-8 flex flex-wrap gap-3">
+          {actions.map((action) => (
+            <Button href={action.href} variant={action.variant ?? 'primary'}>
+              {action.label}
+            </Button>
+          ))}
+        </div>
+      )}
+    </div>
+    <div class={imageFirst ? 'lg:order-1' : ''}>
+      <Image
+        src={imageData}
+        alt={imageAlt}
+        widths={[480, 720, 960]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        loading="lazy"
+        class="aspect-[4/3] w-full rounded-xl object-cover shadow-lift"
+      />
+    </div>
+  </Container>
+</Section>

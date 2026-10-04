@@ -1,0 +1,459 @@
+{
+  "url": "https://www.tampabayfamilyclinics.com/",
+  "lang": "en",
+  "title": "Home - Tampa Bay Family Clinic",
+  "description": "Tampa Bay Family Clinic is committed to providing quality care to all Tampa, FL and surrounding areas.",
+  "canonical": "https://www.tampabayfamilyclinics.com/",
+  "outline": [
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Your health is our priority"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Tampa Bay Family Clinic"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Primary Care"
+    },
+    {
+      "kind": "text",
+      "text": "Receive the medical services you need with our primary care."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Laboratory Testing"
+    },
+    {
+      "kind": "text",
+      "text": "Getting a lab test is easy! Mostly, we'll have you in and out in 15 minutes."
+    },
+    {
+      "kind": "link",
+      "href": "/our-services/",
+      "text": "View Our Services"
+    },
+    {
+      "kind": "text",
+      "text": "\" My family fully trusts Tampa Bay Family Clinic, they have been with us for years and have helped us on numerous occasions. \""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-signature-920c5b14b8.webp",
+      "alt": "",
+      "width": "454",
+      "height": "226"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Request an Appointment"
+    },
+    {
+      "kind": "link",
+      "href": "/#contact-us",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2024-11-tfc-to-form-d063f5e9ea.webp",
+      "alt": "",
+      "width": "567",
+      "height": "279"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Your Family"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Health Center"
+    },
+    {
+      "kind": "link",
+      "href": "/our-services/",
+      "text": "View Our Services"
+    },
+    {
+      "kind": "link",
+      "href": "/primary-care/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Primary Care"
+    },
+    {
+      "kind": "text",
+      "text": "Receive the medical services you need with our primary care."
+    },
+    {
+      "kind": "link",
+      "href": "/laboratory-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Lab Testing"
+    },
+    {
+      "kind": "text",
+      "text": "Getting a lab test is easy! Mostly, we'll have you in and out in 15 minutes. Test results accessible within 24-72 hours."
+    },
+    {
+      "kind": "link",
+      "href": "/medical-marijuana-doctors/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-09-drop-cannabis-medicinal-blue-2ed52c8ecf.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Medical Marijuana Doctors"
+    },
+    {
+      "kind": "text",
+      "text": "If you are interested in getting your medical marijuana card but unsure what to expect, you are in the right place."
+    },
+    {
+      "kind": "link",
+      "href": "/immigration-medical-exam-tampa/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-inmigration-medical-exam-a3af222af7.webp",
+      "alt": "",
+      "width": "45",
+      "height": "45"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Immigration Medical Exam"
+    },
+    {
+      "kind": "text",
+      "text": "We provide all the medical services to meet the requirements of the immigration exam."
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Our Specialized Team"
+    },
+    {
+      "kind": "text",
+      "text": "\" We are a team of doctors, nurses, and physician assistants who work together to ensure that you receive the best treatment you require at a very time that suits you. \""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-img-signature-e3ba04d9b5.webp",
+      "alt": "",
+      "width": "118",
+      "height": "54"
+    },
+    {
+      "kind": "link",
+      "href": "/covid-19-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-testing-Tampa-Florida-f9094178c6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "COVID-19 Testing"
+    },
+    {
+      "kind": "text",
+      "text": "Tampa Bay Family Clinic provides convenient and affordable COVID-19 testing."
+    },
+    {
+      "kind": "link",
+      "href": "/laboratory-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Ekg-Lab-Test-Tampa-Florida-2939e0a194.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "EKG Lab Test"
+    },
+    {
+      "kind": "text",
+      "text": "Prevent, detect, monitor, and treat heart conditions. We'll help you take care of your heart."
+    },
+    {
+      "kind": "link",
+      "href": "/laboratory-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Spirometry-Test-Florida-Tampa-93e95cf865.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Spirometry Test"
+    },
+    {
+      "kind": "text",
+      "text": "Start breathing better and naturally with our spirometry screening and prevention test."
+    },
+    {
+      "kind": "link",
+      "href": "/laboratory-testing/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Pregnancy-Tests-Tampa-Florida-43bd71b0b3.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Pregnancy Tests"
+    },
+    {
+      "kind": "text",
+      "text": "A pregnancy test can tell whether you are pregnant by checking for a particular hormone in your body."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-07-doctor-profile-tampa-famili-clinics-5-Mario-J.-Gonzalez-Fernandez-PNG-min-b97df7de85.webp",
+      "alt": "",
+      "width": "800",
+      "height": "800"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Request an Appointment"
+    },
+    {
+      "kind": "text",
+      "text": "We are dedicated to providing high-quality, affordable, caring healthcare and support services for all, with a special commitment to our patients!"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Request an Appointment"
+    },
+    {
+      "kind": "text",
+      "text": "If you need professional medical help in the Tampa area, do not hesitate to locate and contact us. We will be happy to assist you!"
+    },
+    {
+      "kind": "iframe",
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.325823059057!2d-82.4883323245671!3d28.01451571187682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c1121a826145%3A0x9cdac582625046cb!2sTampa%20Bay%20Family%20Clinic!5e0!3m2!1sen!2sco!4v1779306092746!5m2!1sen!2sco"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Working Hours"
+    },
+    {
+      "kind": "text",
+      "text": "Check out our working hours to plan your visit."
+    },
+    {
+      "kind": "text",
+      "text": "Monday"
+    },
+    {
+      "kind": "text",
+      "text": "8AM–4:30PM"
+    },
+    {
+      "kind": "text",
+      "text": "Tuesday"
+    },
+    {
+      "kind": "text",
+      "text": "8AM–4:30PM"
+    },
+    {
+      "kind": "text",
+      "text": "Wednesday"
+    },
+    {
+      "kind": "text",
+      "text": "8AM–4:30PM"
+    },
+    {
+      "kind": "text",
+      "text": "Thursday"
+    },
+    {
+      "kind": "text",
+      "text": "8AM–4:30PM"
+    },
+    {
+      "kind": "text",
+      "text": "Friday"
+    },
+    {
+      "kind": "text",
+      "text": "8AM–4:30PM"
+    },
+    {
+      "kind": "link",
+      "href": "/#contact-us",
+      "text": "Request an Appointment"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-phone-2-536c6e32c5.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Phone Number"
+    },
+    {
+      "kind": "text",
+      "text": "(813) 933-2880"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-hours-2-b9922d430f.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Working Hours"
+    },
+    {
+      "kind": "text",
+      "text": "Monday - Friday8AM - 4:30PM"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-Address-fc1908dbc3.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Address"
+    },
+    {
+      "kind": "text",
+      "text": "7206 N Armenia Ave, Tampa, FL 33604"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-medical-handbook-Tampa-Family-clinics-206430828b.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Email Us"
+    },
+    {
+      "kind": "text",
+      "text": "[email protected]"
+    },
+    {
+      "kind": "text",
+      "text": "Copyright 2026 by Tampa Bay Family Clinic. All rights reserved."
+    },
+    {
+      "kind": "link",
+      "href": "/our-services/",
+      "text": "OUR SERVICES"
+    },
+    {
+      "kind": "link",
+      "href": "/insurances-accepted/",
+      "text": "INSURANCES ACCEPTED"
+    },
+    {
+      "kind": "link",
+      "href": "/our-providers/",
+      "text": "OUR PROVIDERS"
+    },
+    {
+      "kind": "link",
+      "href": "/contact-us/",
+      "text": "CONTACT US"
+    },
+    {
+      "kind": "link",
+      "href": "/#top",
+      "text": "BACK TO TOP"
+    }
+  ]
+}

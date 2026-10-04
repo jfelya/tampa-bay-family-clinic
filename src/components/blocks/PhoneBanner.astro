@@ -1,0 +1,58 @@
+---
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import Icon from '../primitives/Icon.astro';
+import { site } from '../../data/site';
+import { ui, type Locale } from '../../i18n/ui';
+
+interface Props {
+  label?: string;
+  tone?: 'default' | 'subtle';
+  locale: Locale;
+}
+
+const { label, tone = 'subtle', locale } = Astro.props;
+const t = ui[locale];
+const info = site[locale];
+---
+
+<Section spacing="sm" background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container>
+    <div
+      class="flex flex-col items-center justify-between gap-5 rounded-xl border border-border bg-surface p-6 shadow-soft sm:flex-row sm:p-8"
+    >
+      <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+        <span
+          class="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-50 text-brand sm:inline-flex dark:bg-primary-950"
+        >
+          <Icon name="phone" size={22} />
+        </span>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wide text-text-muted">
+            {label ?? t.phoneLabel}
+          </p>
+          <a
+            href={info.phoneHref}
+            class="font-heading text-2xl font-extrabold text-brand transition-colors duration-200 ease-soft hover:text-brand-hover lg:text-3xl"
+          >
+            {info.phone}
+          </a>
+        </div>
+      </div>
+      <button
+        type="button"
+        data-copy-phone={info.phone}
+        data-copied-label={t.copiedPhone}
+        class="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-text transition-colors duration-200 ease-soft hover:bg-bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+      >
+        <Icon name="copy" size={16} class="text-brand" />
+        <span data-copy-label>{t.copyPhone}</span>
+      </button>
+    </div>
+  </Container>
+</Section>
+
+<script>
+  import { initCopy } from '../../scripts/copy';
+  initCopy();
+</script>

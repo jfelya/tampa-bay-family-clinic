@@ -1,0 +1,109 @@
+---
+import { Image } from 'astro:assets';
+import Container from '../primitives/Container.astro';
+import Button from '../primitives/Button.astro';
+import Badge from '../primitives/Badge.astro';
+import { requireAsset } from '../../lib/assets';
+
+interface Action {
+  label: string;
+  href: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
+  icon?: string;
+}
+
+interface Props {
+  variant?: 'home' | 'page';
+  eyebrow?: string;
+  heading: string;
+  subheading?: string;
+  image?: string;
+  imageAlt?: string;
+  actions?: Action[];
+}
+
+const {
+  variant = 'page',
+  eyebrow,
+  heading,
+  subheading,
+  image,
+  imageAlt = '',
+  actions = [],
+} = Astro.props;
+
+const isHome = variant === 'home';
+const imageData = image ? requireAsset(image) : undefined;
+const hasBackground = !isHome && Boolean(imageData);
+---
+
+<section
+  class={isHome
+    ? 'border-b border-border bg-gradient-to-b from-primary-50 to-bg dark:from-primary-950/40 dark:to-bg'
+    : hasBackground
+      ? 'relative overflow-hidden border-b border-border bg-primary-950'
+      : 'border-b border-border bg-gradient-to-b from-primary-50/70 to-bg dark:from-primary-950/30 dark:to-bg'}
+>
+  {hasBackground && (
+    <div class="absolute inset-0" aria-hidden="true">
+      <Image
+        src={imageData!}
+        alt=""
+        widths={[960, 1440, 1920]}
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
+        class="h-full w-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/40 dark:from-ink-950 dark:via-ink-950/90 dark:to-ink-950/40"></div>
+    </div>
+  )}
+
+  <Container
+    class={isHome
+      ? 'grid items-center gap-10 py-10 lg:grid-cols-2 lg:gap-16 lg:py-16'
+      : hasBackground
+        ? 'relative py-10 lg:py-14'
+        : 'relative py-10 lg:py-14'}
+  >
+    <div class={isHome ? '' : 'max-w-3xl'}>
+      {eyebrow && <Badge variant="accent">{eyebrow}</Badge>}
+      <h1 class={`mt-4 font-extrabold text-text ${isHome ? 'text-2xl sm:text-4xl lg:text-5xl' : 'text-xl sm:text-3xl lg:text-4xl'}`}>
+        {heading}
+      </h1>
+      {subheading && (
+        <p class={`mt-5 max-w-2xl whitespace-pre-line ${hasBackground ? 'text-base text-text-muted lg:text-lg' : 'text-lg text-text-muted'}`}>
+          {subheading}
+        </p>
+      )}
+      {actions.length > 0 && (
+        <div class="mt-8 flex flex-wrap gap-3">
+          {actions.map((action) => (
+            <Button
+              href={action.href}
+              variant={action.variant ?? 'primary'}
+              size="lg"
+              icon={action.icon as never}
+              class="max-sm:w-full"
+            >
+              {action.label}
+            </Button>
+          ))}
+        </div>
+      )}
+    </div>
+    {isHome && imageData && (
+      <div class="relative">
+        <Image
+          src={imageData}
+          alt={imageAlt}
+          widths={[480, 720, 960]}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="aspect-[4/3] w-full rounded-xl object-cover shadow-lift"
+        />
+      </div>
+    )}
+  </Container>
+</section>

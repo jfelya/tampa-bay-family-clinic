@@ -1,0 +1,68 @@
+---
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import { requireAsset } from '../../lib/assets';
+
+interface Item {
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  href?: string;
+}
+
+interface Props {
+  heading?: string;
+  intro?: string;
+  columns?: 2 | 3 | 4;
+  items: Item[];
+  tone?: 'default' | 'subtle';
+}
+
+const { heading, intro, columns = 3, items, tone = 'default' } = Astro.props;
+
+const colClasses = {
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-2 lg:grid-cols-3',
+  4: 'sm:grid-cols-2 lg:grid-cols-4',
+};
+---
+
+<Section spacing={heading || intro ? 'md' : 'sm'} background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container>
+    {(heading || intro) && (
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        {heading && <h2>{heading}</h2>}
+        {intro && <p class="mt-4 text-text-muted">{intro}</p>}
+      </div>
+    )}
+    <ul class={`grid gap-6 ${colClasses[columns]}`}>
+      {items.map((item) => {
+        const icon = item.image ? requireAsset(item.image) : undefined;
+        const Tag = item.href ? 'a' : 'div';
+        return (
+          <li>
+            <Tag
+              href={item.href}
+              class:list={[
+                'flex h-full items-start gap-4 rounded-lg border border-border bg-surface p-5 shadow-soft',
+                item.href &&
+                  'transition-all duration-200 ease-soft hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-lift dark:hover:border-primary-800',
+              ]}
+            >
+              {icon && (
+                <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-950">
+                  <img src={icon.src} alt="" width="32" height="32" class="h-8 w-8 object-contain" loading="lazy" />
+                </span>
+              )}
+              <span>
+                <span class="block font-heading text-lg font-bold text-text">{item.title}</span>
+                <span class="mt-1 block text-sm text-text-muted">{item.description}</span>
+              </span>
+            </Tag>
+          </li>
+        );
+      })}
+    </ul>
+  </Container>
+</Section>

@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import { requireAsset } from '../../lib/assets';
+
+interface Item {
+  value: string;
+  label: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+interface Props {
+  heading?: string;
+  items: Item[];
+  tone?: 'default' | 'subtle';
+}
+
+const { heading, items, tone = 'default' } = Astro.props;
+---
+
+<Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container>
+    {heading && <h2 class="mb-10 text-center">{heading}</h2>}
+    <ul class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+      {items.map((item) => (
+        <li class="text-center">
+          {item.image && (
+            <Image
+              src={requireAsset(item.image)}
+              alt={item.imageAlt ?? ''}
+              widths={[200, 313]}
+              sizes="(min-width: 1024px) 25vw, 50vw"
+              loading="lazy"
+              class="mx-auto h-32 w-32 object-contain"
+            />
+          )}
+          <p class="mt-3 font-heading text-3xl font-extrabold text-brand lg:text-4xl">{item.value}</p>
+          <p class="mt-1 text-sm text-text-muted">{item.label}</p>
+        </li>
+      ))}
+    </ul>
+  </Container>
+</Section>

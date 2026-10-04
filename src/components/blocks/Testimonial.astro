@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import { requireAsset } from '../../lib/assets';
+
+interface Props {
+  quote: string;
+  image?: string;
+  imageAlt?: string;
+  tone?: 'default' | 'subtle';
+}
+
+const { quote, image, imageAlt = '', tone = 'default' } = Astro.props;
+const imageData = image ? requireAsset(image) : undefined;
+---
+
+<Section spacing="sm" background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container size="narrow">
+    <figure class="text-center">
+      <blockquote class="whitespace-pre-line font-heading text-xl font-semibold leading-relaxed text-text lg:text-2xl">
+        {quote}
+      </blockquote>
+      {imageData && (
+        <figcaption>
+          <Image
+            src={imageData}
+            alt={imageAlt}
+            widths={[227, 454]}
+            loading="lazy"
+            class="mx-auto mt-6 h-14 w-auto opacity-90"
+          />
+        </figcaption>
+      )}
+    </figure>
+  </Container>
+</Section>

@@ -1,0 +1,145 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/plus-jakarta-sans';
+import '../styles/global.css';
+import Header from '../components/shell/Header.astro';
+import Footer from '../components/shell/Footer.astro';
+import SkipLink from '../components/primitives/SkipLink.astro';
+import { site } from '../data/site';
+import type { Locale } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  lang: Locale;
+  currentPath: string;
+  alternateHref: string;
+  hreflang?: { en: string; es: string };
+  noindex?: boolean;
+  hasAppointmentForm?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  lang,
+  currentPath,
+  alternateHref,
+  hreflang,
+  noindex = false,
+  hasAppointmentForm = false,
+} = Astro.props;
+
+const info = site[lang];
+const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalClinic',
+  name: 'Tampa Bay Family Clinic',
+  url: 'https://www.tampabayfamilyclinics.com/',
+  telephone: '+1-813-933-2880',
+  email: 'info@tampabayfamilyclinics.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7206 N Armenia Ave',
+    addressLocality: 'Tampa',
+    addressRegion: 'FL',
+    postalCode: '33604',
+    addressCountry: 'US',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '16:30',
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={lang} data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {hreflang && (
+      <>
+        <link rel="alternate" hreflang="en" href={hreflang.en} />
+        <link rel="alternate" hreflang="es" href={hreflang.es} />
+        <link rel="alternate" hreflang="x-default" href={hreflang.en} />
+      </>
+    )}
+
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={info.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_US'} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+
+    <script is:inline>
+      // No-flash theme: follow device by default (light), remember manual choice.
+      (function () {
+        try {
+          var stored = localStorage.getItem('tbfc-theme');
+          var theme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    {beaconToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: beaconToken })}
+      ></script>
+    )}
+
+    <slot name="head" />
+  </head>
+
+  <body>
+    <SkipLink locale={lang} />
+    <Header
+      locale={lang}
+      currentPath={currentPath}
+      alternateHref={alternateHref}
+      hasAppointmentForm={hasAppointmentForm}
+    />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={lang} />
+
+    <script>
+      import { initTheme } from '../scripts/theme';
+      initTheme();
+    </script>
+  </body>
+</html>

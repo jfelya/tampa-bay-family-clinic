@@ -1,0 +1,33 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  placeholder?: string;
+  rows?: number;
+  required?: boolean;
+  maxlength?: number;
+  class?: string;
+}
+
+const {
+  id,
+  name,
+  placeholder,
+  rows = 5,
+  required = false,
+  maxlength,
+  class: className = '',
+} = Astro.props;
+---
+
+<textarea
+  id={id}
+  name={name}
+  rows={rows}
+  placeholder={placeholder}
+  required={required}
+  maxlength={maxlength}
+  aria-invalid="false"
+  aria-describedby={`${id}-error`}
+  class={`w-full resize-y rounded-md border border-border bg-surface px-3.5 py-2.5 text-text shadow-sm transition-colors duration-200 ease-soft placeholder:text-text-muted/70 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 aria-[invalid=true]:border-error ${className}`}
+></textarea>

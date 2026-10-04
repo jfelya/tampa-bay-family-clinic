@@ -1,0 +1,37 @@
+{
+  "name": "tampa-bay-family-clinic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tampa Bay Family Clinic website redesign — Astro 5 + Tailwind CSS v4, deployed to Cloudflare Pages.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "cf:preview": "wrangler pages dev dist",
+    "extract": "node scripts/extract-content.mjs",
+    "generate": "node scripts/generate-pages.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^5.18.2",
+    "marked": "^18.0.14",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "wrangler": "^4.147.0",
+    "yaml": "^2.9.1"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.1": true,
+    "workerd@1.20261001.1": true
+  }
+}

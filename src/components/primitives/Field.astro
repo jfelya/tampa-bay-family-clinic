@@ -1,0 +1,27 @@
+---
+interface Props {
+  label: string;
+  forId: string;
+  required?: boolean;
+  optionalLabel?: string;
+  hint?: string;
+  errorId?: string;
+  class?: string;
+}
+
+const { label, forId, required = false, optionalLabel, hint, errorId, class: className = '' } = Astro.props;
+---
+
+<div class={className}>
+  <label for={forId} class="block text-sm font-semibold text-text">
+    {label}{required && <span class="text-error" aria-hidden="true"> *</span>}
+    {!required && optionalLabel && <span class="font-normal text-text-muted"> {optionalLabel}</span>}
+  </label>
+  <div class="mt-1.5">
+    <slot />
+  </div>
+  {hint && <p id={`${forId}-hint`} class="mt-1.5 text-sm text-text-muted">{hint}</p>}
+  {errorId && (
+    <p id={errorId} class="mt-1.5 hidden text-sm font-medium text-error" data-error-for={forId} />
+  )}
+</div>

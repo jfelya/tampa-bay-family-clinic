@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/primitives/Section.astro';
+import Container from '../components/primitives/Container.astro';
+import Button from '../components/primitives/Button.astro';
+import { ui } from '../i18n/ui';
+
+const t = ui.en;
+---
+
+<BaseLayout
+  title="404 - Tampa Bay Family Clinic"
+  description="The page you are looking for does not exist or has moved."
+  canonical="https://www.tampabayfamilyclinics.com/404/"
+  lang="en"
+  currentPath="/404"
+  alternateHref="/"
+  noindex
+>
+  <Section spacing="lg" container="none">
+    <Container size="narrow" class="text-center">
+      <p class="font-heading text-6xl font-extrabold text-brand">404</p>
+      <h1 class="mt-4">{t.notFoundTitle}</h1>
+      <p class="mt-4 text-text-muted">{t.notFoundBody}</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <Button href="/" size="lg">{t.notFoundCta}</Button>
+        <Button href="/contact-us/" variant="secondary" size="lg">{t.requestAppointment}</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

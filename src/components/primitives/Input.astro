@@ -1,0 +1,39 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  autocomplete?: string;
+  required?: boolean;
+  inputmode?: 'text' | 'email' | 'tel' | 'numeric';
+  min?: string;
+  class?: string;
+}
+
+const {
+  id,
+  name,
+  type = 'text',
+  placeholder,
+  autocomplete,
+  required = false,
+  inputmode,
+  min,
+  class: className = '',
+} = Astro.props;
+---
+
+<input
+  id={id}
+  name={name}
+  type={type}
+  placeholder={placeholder}
+  autocomplete={autocomplete}
+  required={required}
+  inputmode={inputmode}
+  min={min}
+  aria-invalid="false"
+  aria-describedby={`${id}-error`}
+  class={`w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-text shadow-sm transition-colors duration-200 ease-soft placeholder:text-text-muted/70 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 aria-[invalid=true]:border-error ${className}`}
+/>

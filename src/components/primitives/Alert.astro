@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  variant?: 'info' | 'success' | 'warning' | 'error';
+  title?: string;
+  class?: string;
+}
+
+const { variant = 'info', title, class: className = '' } = Astro.props;
+
+const variants = {
+  info: 'border-info/30 bg-info-subtle text-info',
+  success: 'border-success/30 bg-success-subtle text-success',
+  warning: 'border-warning/30 bg-warning-subtle text-warning',
+  error: 'border-error/30 bg-error-subtle text-error',
+};
+
+const icons = {
+  info: 'alert-circle',
+  success: 'check',
+  warning: 'alert-circle',
+  error: 'alert-circle',
+} as const;
+---
+
+<div
+  role={variant === 'error' ? 'alert' : 'status'}
+  class={`flex items-start gap-3 rounded-md border px-4 py-3 text-sm ${variants[variant]} ${className}`}
+>
+  <Icon name={icons[variant]} size={18} class="mt-0.5 shrink-0" />
+  <div>
+    {title && <p class="font-semibold">{title}</p>}
+    <div class={title ? 'mt-0.5' : ''}><slot /></div>
+  </div>
+</div>

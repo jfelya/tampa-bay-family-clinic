@@ -1,0 +1,55 @@
+---
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import Button from '../primitives/Button.astro';
+
+interface Action {
+  label: string;
+  href: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
+  icon?: string;
+}
+
+interface Props {
+  heading: string;
+  intro?: string;
+  action?: Action;
+  tone?: 'default' | 'subtle';
+  locale: 'en' | 'es';
+}
+
+const { heading, intro, action, tone = 'default', locale } = Astro.props;
+
+const weekdays = {
+  en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  es: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'],
+};
+
+const times = '8AM–4:30PM';
+---
+
+<Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container>
+    <div class="grid items-center gap-8 rounded-xl bg-primary-950 p-8 text-white lg:grid-cols-2 lg:p-12">
+      <div>
+        <h2 class="text-white">{heading}</h2>
+        {intro && <p class="mt-3 text-primary-200">{intro}</p>}
+        {action && (
+          <div class="mt-6">
+            <Button href={action.href} variant={action.variant ?? 'accent'} icon={action.icon as never}>
+              {action.label}
+            </Button>
+          </div>
+        )}
+      </div>
+      <ul class="divide-y divide-white/10">
+        {weekdays[locale].map((day) => (
+          <li class="flex items-center justify-between py-3">
+            <span class="font-medium">{day}</span>
+            <span class="text-primary-200">{times}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</Section>

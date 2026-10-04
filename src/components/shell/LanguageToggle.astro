@@ -1,0 +1,40 @@
+---
+import { ui, type Locale } from '../../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  href: string;
+  variant?: 'dark' | 'light';
+}
+
+const { locale, href, variant = 'dark' } = Astro.props;
+const t = ui[locale];
+const other: Locale = locale === 'en' ? 'es' : 'en';
+const otherLabel = other === 'es' ? t.spanish : t.english;
+const switchLabel = other === 'es' ? t.switchToSpanish : t.switchToEnglish;
+
+const base = 'px-2.5 py-1 rounded text-xs font-bold tracking-wide transition-colors duration-200 ease-soft';
+const styles =
+  variant === 'dark'
+    ? {
+        active: 'bg-white/15 text-white',
+        link: 'text-primary-200 hover:text-white hover:bg-white/10',
+      }
+    : {
+        active: 'bg-primary-50 text-primary-700 dark:bg-primary-950 dark:text-primary-200',
+        link: 'text-text-muted hover:text-text hover:bg-bg-subtle',
+      };
+---
+
+<div class="inline-flex items-center gap-1" role="group" aria-label={t.language}>
+  <span class={`${base} ${styles.active}`} aria-current="true">{locale === 'en' ? t.english : t.spanish}</span>
+  <a
+    href={href}
+    hreflang={other}
+    lang={other}
+    aria-label={switchLabel}
+    class={`${base} ${styles.link}`}
+  >
+    {otherLabel}
+  </a>
+</div>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SectionRenderer from '../components/blocks/SectionRenderer.astro';
+import { canonicalUrl, findTranslation, pageHref, type PageEntry } from '../i18n/routes';
+
+interface Props {
+  page: PageEntry;
+  pages: PageEntry[];
+}
+
+const { page, pages } = Astro.props;
+const { data } = page;
+const twin = findTranslation(page, pages);
+
+const twinHref = twin
+  ? pageHref(twin.data.slug)
+  : data.lang === 'en'
+    ? '/es/inicio/'
+    : '/';
+
+const enEntry = data.lang === 'en' ? page : twin;
+const esEntry = data.lang === 'es' ? page : twin;
+const hreflang = {
+  en: canonicalUrl(enEntry ? enEntry.data.slug : ''),
+  es: canonicalUrl(esEntry ? esEntry.data.slug : 'es/inicio'),
+};
+
+const title = data.seo.title ?? data.title;
+const hasAppointmentForm = data.sections.some((section) => section.type === 'form');
+
+const FALLBACK_SERVICE_IMAGE =
+  'legacy/wp-content-uploads-2022-06-doctor-showing-patient-where-to-sit-Tampa-Florida-2-2-174dec96ab.webp';
+
+function firstImage(list: any[]): { src: string; alt: string } | null {
+  for (const s of list) {
+    if (s?.images?.length) return { src: s.images[0].src, alt: s.images[0].alt ?? '' };
+    if (s?.image) return { src: s.image, alt: s.imageAlt ?? '' };
+    if (Array.isArray(s?.items)) {
+      for (const item of s.items) {
+        if (item?.image) return { src: item.image, alt: item.imageAlt ?? '' };
+      }
+    }
+  }
+  return null;
+}
+
+// Service pages: fold the intro paragraph(s) into the hero so the opening
+// section (background image + description) is visible above the fold, and the
+// duplicate in-page "Request an Appointment" button is gone.
+let sections: any[] = [...data.sections];
+if (
+  data.archetype === 'service' &&
+  sections[0]?.type === 'hero' &&
+  sections[1]?.type === 'richText'
+) {
+  const hero = { ...sections[0], subheading: sections[1].body };
+  if (!hero.image) {
+    const img = firstImage(sections.slice(2)) ?? { src: FALLBACK_SERVICE_IMAGE, alt: '' };
+    hero.image = img.src;
+    hero.imageAlt = img.alt;
+  }
+  sections = [hero, ...sections.slice(2)];
+}
+---
+
+<BaseLayout
+  title={title}
+  description={data.description}
+  canonical={data.seo.canonical}
+  lang={data.lang}
+  currentPath={pageHref(data.slug)}
+  alternateHref={twinHref}
+  hreflang={hreflang}
+  noindex={data.seo.noindex}
+  hasAppointmentForm={hasAppointmentForm}
+>
+  {sections.map((section) => <SectionRenderer section={section} locale={data.lang} />)}
+</BaseLayout>

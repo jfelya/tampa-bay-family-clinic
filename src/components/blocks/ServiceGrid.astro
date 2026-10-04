@@ -1,0 +1,128 @@
+---
+import { getCollection } from 'astro:content';
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import Icon from '../primitives/Icon.astro';
+import Button from '../primitives/Button.astro';
+import { requireAsset } from '../../lib/assets';
+import type { Locale } from '../../i18n/ui';
+
+interface Action {
+  label: string;
+  href: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
+  icon?: string;
+}
+
+interface InlineItem {
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  href: string;
+}
+
+interface Props {
+  heading?: string;
+  intro?: string;
+  keys?: string[];
+  items?: InlineItem[];
+  limit?: number;
+  action?: Action;
+  tone?: 'default' | 'subtle';
+  locale: Locale;
+}
+
+const {
+  heading,
+  intro,
+  keys,
+  items,
+  limit,
+  action,
+  tone = 'default',
+  locale,
+} = Astro.props;
+
+interface Card {
+  title: string;
+  description: string;
+  image?: string;
+  href: string;
+}
+
+let cards: Card[] = [];
+
+if (items?.length) {
+  cards = items.map((item) => ({
+    title: item.title,
+    description: item.description,
+    image: item.image,
+    href: item.href,
+  }));
+} else {
+  const all = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+  let services = all;
+  if (keys?.length) {
+    services = keys
+      .map((key) => all.find((service) => service.data.key === key))
+      .filter((service): service is NonNullable<typeof service> => Boolean(service));
+  }
+  cards = services.map((service) => ({
+    title: service.data.title[locale],
+    description: service.data.description[locale],
+    image: service.data.image,
+    href: service.data.href[locale],
+  }));
+}
+
+if (limit) cards = cards.slice(0, limit);
+
+const columns = cards.length > 6 ? 'lg:grid-cols-4' : 'lg:grid-cols-3';
+---
+
+<Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
+  <Container>
+    {(heading || intro) && (
+      <div class="mx-auto mb-12 max-w-2xl text-center">
+        {heading && <h2>{heading}</h2>}
+        {intro && <p class="mt-4 text-text-muted">{intro}</p>}
+      </div>
+    )}
+    <ul class={`grid gap-6 sm:grid-cols-2 ${columns}`}>
+      {cards.map((card) => {
+        const icon = card.image ? requireAsset(card.image) : undefined;
+        return (
+          <li>
+            <a
+              href={card.href}
+              class="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 shadow-soft transition-all duration-200 ease-soft hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-lift dark:hover:border-primary-800"
+            >
+              {icon && (
+                <span class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-950">
+                  <img src={icon.src} alt="" width="40" height="40" class="h-10 w-10 object-contain" loading="lazy" />
+                </span>
+              )}
+              <h3 class="font-heading text-lg font-bold text-text">{card.title}</h3>
+              <p class="mt-2 flex-1 text-sm text-text-muted">{card.description}</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                <Icon
+                  name="arrow-right"
+                  size={16}
+                  class="transition-transform duration-200 ease-soft group-hover:translate-x-1"
+                />
+              </span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+    {action && (
+      <div class="mt-10 text-center">
+        <Button href={action.href} variant={action.variant ?? 'ghost'} icon={action.icon as never}>
+          {action.label}
+        </Button>
+      </div>
+    )}
+  </Container>
+</Section>

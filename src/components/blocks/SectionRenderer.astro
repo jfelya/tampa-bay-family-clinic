@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Hero from './Hero.astro';
+import RichText from './RichText.astro';
+import ContentSection from './ContentSection.astro';
+import SplitImage from './SplitImage.astro';
+import ServiceGrid from './ServiceGrid.astro';
+import FeatureList from './FeatureList.astro';
+import Stats from './Stats.astro';
+import InsuranceLogos from './InsuranceLogos.astro';
+import ProviderList from './ProviderList.astro';
+import Testimonial from './Testimonial.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import ServiceLinks from './ServiceLinks.astro';
+import FormBlock from './FormBlock.astro';
+import ContactDetails from './ContactDetails.astro';
+import MapEmbed from './MapEmbed.astro';
+import PhoneBanner from './PhoneBanner.astro';
+import AnchorNav from './AnchorNav.astro';
+import type { Locale } from '../../i18n/ui';
+
+type Section = CollectionEntry<'pages'>['data']['sections'][number];
+
+interface Props {
+  section: Section;
+  locale: Locale;
+}
+
+const { section, locale } = Astro.props;
+---
+
+{section.type === 'hero' && <Hero {...section} />}
+{section.type === 'richText' && <RichText {...section} />}
+{section.type === 'contentSection' && <ContentSection {...section} />}
+{section.type === 'splitImage' && <SplitImage {...section} />}
+{section.type === 'serviceGrid' && <ServiceGrid {...section} locale={locale} />}
+{section.type === 'featureList' && <FeatureList {...section} />}
+{section.type === 'stats' && <Stats {...section} />}
+{section.type === 'insuranceLogos' && <InsuranceLogos {...section} />}
+{section.type === 'providerList' && <ProviderList {...section} locale={locale} />}
+{section.type === 'testimonial' && <Testimonial {...section} />}
+{section.type === 'faq' && <Faq {...section} />}
+{section.type === 'cta' && <Cta {...section} />}
+{section.type === 'serviceLinks' && <ServiceLinks {...section} />}
+{section.type === 'form' && <FormBlock {...section} locale={locale} />}
+{section.type === 'contactDetails' && <ContactDetails {...section} locale={locale} />}
+{section.type === 'map' && <MapEmbed {...section} locale={locale} />}
+{section.type === 'phoneBanner' && <PhoneBanner {...section} locale={locale} />}
+{section.type === 'anchorNav' && <AnchorNav {...section} />}

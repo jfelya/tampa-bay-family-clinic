@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../primitives/Section.astro';
+import Container from '../primitives/Container.astro';
+import { md } from '../../lib/markdown';
+import { requireAsset } from '../../lib/assets';
+
+interface BlockImage {
+  src: string;
+  alt?: string;
+}
+
+interface Props {
+  id?: string;
+  heading: string;
+  body: string;
+  images?: BlockImage[];
+  imagePosition?: 'left' | 'right';
+  tone?: 'default' | 'subtle';
+}
+
+const {
+  id,
+  heading,
+  body,
+  images = [],
+  imagePosition = 'right',
+  tone = 'default',
+} = Astro.props;
+
+const resolved = images.map((img) => ({ data: requireAsset(img.src), alt: img.alt ?? '' }));
+const hasImages = resolved.length > 0;
+const imageFirst = imagePosition === 'left';
+---
+
+<Section
+  id={id}
+  background={tone === 'subtle' ? 'subtle' : 'default'}
+  spacing="md"
+  container="none"
+  class="scroll-mt-24"
+>
+  <Container>
+    <div class={hasImages ? 'grid items-start gap-8 lg:grid-cols-2 lg:gap-14' : 'max-w-3xl'}>
+      <div class={hasImages && !imageFirst ? '' : 'lg:order-2'}>
+        <h2 class="mb-5">{heading}</h2>
+        <div class="prose-tbfc max-w-none" set:html={md(body)} />
+      </div>
+      {hasImages && (
+        <div class={`space-y-6 ${imageFirst ? 'lg:order-1' : 'lg:order-2'}`}>
+          {resolved.map((img) => (
+            <Image
+              src={img.data}
+              alt={img.alt}
+              widths={[420, 640, 900]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              class="aspect-[3/2] w-full rounded-xl object-cover shadow-soft"
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </Container>
+</Section>

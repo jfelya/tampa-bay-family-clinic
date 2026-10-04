@@ -1,0 +1,83 @@
+---
+import Container from '../primitives/Container.astro';
+import Icon from '../primitives/Icon.astro';
+import { navigation } from '../../data/navigation';
+import { site } from '../../data/site';
+import { ui, type Locale } from '../../i18n/ui';
+import logo from '../../assets/legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-logo-2-d15855e3b8.webp';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const info = site[locale];
+const nav = navigation[locale];
+const year = new Date().getFullYear();
+const privacyHref = locale === 'en' ? '/privacy-policy/' : '/es/politica-de-privacidad/';
+---
+
+<footer class="bg-primary-950 text-primary-100">
+  <Container class="grid gap-10 py-14 text-center sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Clinic info: phone/email/hours live here, so there is no separate contact column -->
+    <div class="flex min-w-0 flex-col items-center">
+      <span class="inline-flex rounded-md bg-white p-1.5 ring-1 ring-white/10">
+        <img src={logo.src} alt={info.name} width="180" height="98" class="h-11 w-auto" />
+      </span>
+      <ul class="mt-5 space-y-3 text-sm text-primary-200">
+        <li class="flex items-center justify-center gap-3">
+          <Icon name="map-pin" size={18} class="shrink-0 text-primary-300" />
+          <span class="min-w-0 [overflow-wrap:anywhere]">{info.address}</span>
+        </li>
+        <li class="flex items-center justify-center gap-3">
+          <Icon name="phone" size={18} class="shrink-0 text-primary-300" />
+          <span class="min-w-0 [overflow-wrap:anywhere]">{info.phone}</span>
+        </li>
+        <li class="flex items-center justify-center gap-3">
+          <Icon name="mail" size={18} class="shrink-0 text-primary-300" />
+          <span class="min-w-0 [overflow-wrap:anywhere]">{info.email}</span>
+        </li>
+        <li class="flex items-center justify-center gap-3">
+          <Icon name="clock" size={18} class="shrink-0 text-primary-300" />
+          <span class="min-w-0 [overflow-wrap:anywhere]">{info.hours}</span>
+        </li>
+      </ul>
+    </div>
+
+    <nav aria-label={t.footerServices} class="min-w-0">
+      <h2 class="font-heading text-base font-bold text-white">{t.footerServices}</h2>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {nav.footer.services.map((link) => (
+          <li>
+            <a href={link.href} class="text-primary-200 transition-colors duration-200 ease-soft hover:text-white">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label={t.footerQuickLinks} class="min-w-0">
+      <h2 class="font-heading text-base font-bold text-white">{t.footerQuickLinks}</h2>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {nav.footer.quick.map((link) => (
+          <li>
+            <a href={link.href} class="text-primary-200 transition-colors duration-200 ease-soft hover:text-white">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </Container>
+
+  <div class="border-t border-white/10">
+    <Container class="flex flex-col items-center justify-center gap-3 py-5 text-center text-sm text-primary-300 sm:flex-row">
+      <p>© {year} {t.copyright}</p>
+      <a href={privacyHref} class="transition-colors duration-200 ease-soft hover:text-white">
+        {nav.footer.quick.find((link) => link.href === privacyHref)?.label ?? 'Privacy Policy'}
+      </a>
+    </Container>
+  </div>
+</footer>

@@ -1,0 +1,43 @@
+---
+import Container from './Container.astro';
+
+interface Props {
+  id?: string;
+  spacing?: 'sm' | 'md' | 'lg' | 'none';
+  background?: 'default' | 'subtle' | 'primary' | 'accent';
+  as?: string;
+  container?: 'default' | 'narrow' | 'wide' | 'none';
+  class?: string;
+}
+
+const {
+  id,
+  spacing = 'md',
+  background = 'default',
+  as: Tag = 'section',
+  container = 'default',
+  class: className = '',
+} = Astro.props;
+
+const spacings = {
+  none: '',
+  sm: 'py-10 lg:py-14',
+  md: 'py-16 lg:py-24',
+  lg: 'py-20 lg:py-28',
+};
+
+const backgrounds = {
+  default: 'bg-bg',
+  subtle: 'bg-bg-subtle',
+  primary: 'bg-primary-950 text-white',
+  accent: 'bg-accent-50 dark:bg-accent-950/30',
+};
+---
+
+<Tag id={id} class={`${spacings[spacing]} ${backgrounds[background]} ${className}`}>
+  {container === 'none' ? (
+    <slot />
+  ) : (
+    <Container size={container}>{<slot />}</Container>
+  )}
+</Tag>

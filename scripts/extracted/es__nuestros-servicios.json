@@ -1,0 +1,324 @@
+{
+  "url": "https://www.tampabayfamilyclinics.com/es/nuestros-servicios/",
+  "lang": "es",
+  "title": "Nuestros Servicios - Tampa Bay Family Clinic",
+  "description": "Our services objective is to work in partnership with the community to promote and protect the health and social well-being in the State of Florida.",
+  "canonical": "https://www.tampabayfamilyclinics.com/es/nuestros-servicios/",
+  "outline": [
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Nuestros Servicios"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-covid-19-testing-Tampa-Florida-f9094178c6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pruebas De COVID-19"
+    },
+    {
+      "kind": "text",
+      "text": "Tampa Bay Family Clinic ofrece pruebas COVID-19 convenientes y asequibles."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Ekg-Lab-Test-Tampa-Florida-4-ae0fda6c47.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Electrocardiograma"
+    },
+    {
+      "kind": "text",
+      "text": "Prevenir, detectar, monitorear y tratar enfermedades del corazón. Te ayudaremos a cuidar tu corazón."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Spirometry-Test-Florida-Tampa-93e95cf865.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Prueba De Espirometría"
+    },
+    {
+      "kind": "text",
+      "text": "Comienza a respirar mejor y de forma natural con nuestra prueba de detección y prevención de espirometría."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Pregnancy-Tests-Tampa-Florida-3-348ce219a3.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pruebas De Embarazo"
+    },
+    {
+      "kind": "text",
+      "text": "Una prueba de embarazo puede determinar si está embarazada al verificar una hormona en particular en su cuerpo."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-2-fe208d5b4c.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Análisis de sangre"
+    },
+    {
+      "kind": "text",
+      "text": "Realizamos los análisis de sangre necesarios para realizar un seguimiento de su bienestar físico general."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-drug-test-tampa-florida-d8f88161a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Prueba de drogas"
+    },
+    {
+      "kind": "text",
+      "text": "Nos aseguramos de que nuestras pruebas de drogas sean realizadas correctamente por profesionales de la salud capacitados."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-pap-smear-test-tampa-florida-5c987421db.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pruebas de Papanicolaou"
+    },
+    {
+      "kind": "text",
+      "text": "La detección temprana del cáncer de cuello uterino con una prueba de Papanicolaou le brinda una mayor probabilidad de cura."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-Prenatal-Tests-Tampa-Florida-0932d1a178.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "Pruebas prenatales"
+    },
+    {
+      "kind": "text",
+      "text": "Con pruebas de detección y diagnóstico, podemos proporcionar información sobre la salud de su bebé."
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-client-satisfation-2-2-652ad27de9.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "99%"
+    },
+    {
+      "kind": "text",
+      "text": "Satisfacción del cliente"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-Happy-with-Staff-2-3-274e8fe1b0.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "97%"
+    },
+    {
+      "kind": "text",
+      "text": "Resultados precisos"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-Happy-with-Staff-2-2-bb3eb29ec8.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "100%"
+    },
+    {
+      "kind": "text",
+      "text": "Contentos con el personal"
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-circle-progress-bar-health-maintenance-2-5d12d9053c.webp",
+      "alt": "",
+      "width": "626",
+      "height": "628"
+    },
+    {
+      "kind": "heading",
+      "level": 1,
+      "text": "95%"
+    },
+    {
+      "kind": "text",
+      "text": "Mantenimiento de la salud"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Más"
+    },
+    {
+      "kind": "heading",
+      "level": 2,
+      "text": "Servicios"
+    },
+    {
+      "kind": "link",
+      "href": "/es/cuidados-primarios/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Cuidado Primario"
+    },
+    {
+      "kind": "text",
+      "text": "Reciba los servicios médicos que necesita con nuestra atención primaria."
+    },
+    {
+      "kind": "link",
+      "href": "/es/pruebas-de-laboratorio/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Pruebas de laboratorio"
+    },
+    {
+      "kind": "text",
+      "text": "¡Hacerse una prueba de laboratorio es fácil! En general, podrá entrar y salir en 15 minutos. Resultados de la prueba accesibles dentro de las 24-72 horas."
+    },
+    {
+      "kind": "link",
+      "href": "http://https/es/medicos-de-marihuana-medicinal/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-09-drop-cannabis-medicinal-blue-2ed52c8ecf.webp",
+      "alt": "",
+      "width": "50",
+      "height": "50"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Médicos De Marihuana Medicinal"
+    },
+    {
+      "kind": "text",
+      "text": "Si está interesado en obtener su tarjeta de marihuana medicinal pero no está seguro de qué esperar, está en el lugar correcto."
+    },
+    {
+      "kind": "link",
+      "href": "/es/examen-medico-de-inmigracion/",
+      "text": ""
+    },
+    {
+      "kind": "image",
+      "src": "/assets/legacy/wp-content-uploads-2022-03-inmigration-medical-exam-a3af222af7.webp",
+      "alt": "",
+      "width": "45",
+      "height": "45"
+    },
+    {
+      "kind": "heading",
+      "level": 4,
+      "text": "Examen Médico de Inmigración"
+    },
+    {
+      "kind": "text",
+      "text": "Brindamos todos los servicios médicos para cumplir con los requisitos del examen de inmigración."
+    },
+    {
+      "kind": "text",
+      "text": "Copyright 2026 by Tampa Bay Family Clinic. All rights reserved."
+    },
+    {
+      "kind": "link",
+      "href": "/es/nuestros-servicios/",
+      "text": "NUESTROS SERVICIOS"
+    },
+    {
+      "kind": "link",
+      "href": "/es/seguros-aceptados/",
+      "text": "Seguros Acceptados"
+    },
+    {
+      "kind": "link",
+      "href": "/es/nuestros-doctores/",
+      "text": "Nuestros Doctores"
+    },
+    {
+      "kind": "link",
+      "href": "/es/contactanos/",
+      "text": "Contáctanos"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "url": "https://www.tampabayfamilyclinics.com/",
+    "lang": "en",
+    "title": "Home - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic is committed to providing quality care to all Tampa, FL and surrounding areas.",
+    "file": "en__home.json",
+    "nodes": 89,
+    "headings": 23,
+    "images": 18
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/contact-us/",
+    "lang": "en",
+    "title": "Contact Us - Tampa Bay Family Clinic",
+    "description": "If you need professional medical help in the Tampa area, do not hesitate to locate and contact us. We will be happy to assist you!",
+    "file": "en__contact-us.json",
+    "nodes": 37,
+    "headings": 10,
+    "images": 4
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/covid-19-testing/",
+    "lang": "en",
+    "title": "COVID-19 Testing - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinics provides accessible COVID-19 testing to the community. Tests are observed and directed by a healthcare worker.",
+    "file": "en__covid-19-testing.json",
+    "nodes": 120,
+    "headings": 29,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/contactanos/",
+    "lang": "es",
+    "title": "Contáctanos - Tampa Bay Family Clinic",
+    "description": "If you need professional medical help in the Tampa area, do not hesitate to locate and contact us. We will be happy to assist you!",
+    "file": "es__contactanos.json",
+    "nodes": 36,
+    "headings": 10,
+    "images": 4
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/cuidados-primarios/",
+    "lang": "es",
+    "title": "Cuidado Primario - Tampa Bay Family Clinic",
+    "description": "Las oficinas de atención primaria de Tampa Bay Family Clinic están ubicadas en toda el área de Tampa Bay, por lo que nunca estará lejos de la atención que necesita.",
+    "file": "es__cuidados-primarios.json",
+    "nodes": 89,
+    "headings": 19,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/examen-fisico-dot/",
+    "lang": "es",
+    "title": "Examen físico DOT - Tampa Bay Family Clinic",
+    "description": "Las ocupaciones como conducir y transportar requieren un examen físico DOT durante el empleo para que el empleado continúe trabajando.",
+    "file": "es__examen-fisico-dot.json",
+    "nodes": 103,
+    "headings": 31,
+    "images": 14
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/examen-medico-de-inmigracion/",
+    "lang": "es",
+    "title": "Examen Médico de Inmigración - Tampa Bay Family Clinic",
+    "description": "Tampa Family Clinic puede guiarlo a través del examen médico de inmigración y ayudarlo a completar su solicitud de tarjeta verde.",
+    "file": "es__examen-medico-de-inmigracion.json",
+    "nodes": 96,
+    "headings": 27,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/inicio/",
+    "lang": "es",
+    "title": "Inicio - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic se compromete a brindar atención de calidad a todo Tampa, FL y sus alrededores.",
+    "file": "es__inicio.json",
+    "nodes": 88,
+    "headings": 23,
+    "images": 18
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/medicos-de-marihuana-medicinal/",
+    "lang": "es",
+    "title": "Médicos de marihuana medicinal - Tampa Bay Family Clinic",
+    "description": "Con el objetivo de obtener una tarjeta de marihuana medicinal, deberá hablar con un médico de marihuana medicinal y está en el lugar correcto.",
+    "file": "es__medicos-de-marihuana-medicinal.json",
+    "nodes": 122,
+    "headings": 41,
+    "images": 17
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/nuestros-doctores/",
+    "lang": "es",
+    "title": "Nuestros Doctores - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic is committed to providing quality care to Tampa, FL and surrounding areas.",
+    "file": "es__nuestros-doctores.json",
+    "nodes": 58,
+    "headings": 17,
+    "images": 13
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/nuestros-servicios/",
+    "lang": "es",
+    "title": "Nuestros Servicios - Tampa Bay Family Clinic",
+    "description": "Our services objective is to work in partnership with the community to promote and protect the health and social well-being in the State of Florida.",
+    "file": "es__nuestros-servicios.json",
+    "nodes": 60,
+    "headings": 19,
+    "images": 16
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/politica-de-privacidad/",
+    "lang": "es",
+    "title": "Política de privacidad - Tampa Bay Family Clinic",
+    "description": "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar",
+    "file": "es__politica-de-privacidad.json",
+    "nodes": 98,
+    "headings": 7,
+    "images": 0
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/pruebas-de-covid-19/",
+    "lang": "es",
+    "title": "Pruebas de COVID-19 - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinics proporciona pruebas de COVID-19 accesibles a la comunidad. Las pruebas son observadas y dirigidas por un trabajador de la salud.",
+    "file": "es__pruebas-de-covid-19.json",
+    "nodes": 119,
+    "headings": 28,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/pruebas-de-laboratorio/",
+    "lang": "es",
+    "title": "Pruebas de Laboratorio - Tampa Bay Family Clinic",
+    "description": "En Tampa Bay Family Clinics, nuestros servicios de pruebas de laboratorio brindan una gama completa de pruebas, desde análisis de sangre de rutina hasta pruebas altamente especializadas.",
+    "file": "es__pruebas-de-laboratorio.json",
+    "nodes": 179,
+    "headings": 49,
+    "images": 24
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/es/seguros-aceptados/",
+    "lang": "es",
+    "title": "Seguros Aceptados - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic is committed to providing quality care to Tampa, FL and surrounding areas.",
+    "file": "es__seguros-aceptados.json",
+    "nodes": 35,
+    "headings": 9,
+    "images": 12
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/immigration-medical-exam-tampa/",
+    "lang": "en",
+    "title": "Immigration Medical Exam - Tampa Bay Family Clinic",
+    "description": "Tampa Family Clinic can walk you through the Immigration Medical Exam and help you complete your green card application.",
+    "file": "en__immigration-medical-exam-tampa.json",
+    "nodes": 95,
+    "headings": 27,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/insurances-accepted/",
+    "lang": "en",
+    "title": "Insurances Accepted - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic is committed to providing quality care to Tampa, FL and surrounding areas.",
+    "file": "en__insurances-accepted.json",
+    "nodes": 36,
+    "headings": 9,
+    "images": 12
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/laboratory-testing/",
+    "lang": "en",
+    "title": "Laboratory Testing - Tampa Bay Family Clinic",
+    "description": "At Tampa Bay Family Clinics - Our Laboratory Testing Services provides a full range of testing, from routine blood work to highly specialized testing.",
+    "file": "en__laboratory-testing.json",
+    "nodes": 177,
+    "headings": 49,
+    "images": 24
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/medical-marijuana-doctors/",
+    "lang": "en",
+    "title": "Medical Marijuana Doctors - Tampa Bay Family Clinic",
+    "description": "With the aim of obtaining a medical marijuana card, you’ll need to speak to a medical marijuana doctors and you are in the right place.",
+    "file": "en__medical-marijuana-doctors.json",
+    "nodes": 122,
+    "headings": 41,
+    "images": 17
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/our-providers/",
+    "lang": "en",
+    "title": "Our Providers - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic is committed to providing quality care to Tampa, FL and surrounding areas.",
+    "file": "en__our-providers.json",
+    "nodes": 59,
+    "headings": 17,
+    "images": 13
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/our-services/",
+    "lang": "en",
+    "title": "Our Services - Tampa Bay Family Clinic",
+    "description": "Our services objective is to work in partnership with the community to promote and protect the health and social well-being in the State of Florida.",
+    "file": "en__our-services.json",
+    "nodes": 61,
+    "headings": 19,
+    "images": 16
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/physical-exam-dot/",
+    "lang": "en",
+    "title": "Physical Exam DOT - Tampa Bay Family Clinic",
+    "description": "Occupations such as driving and transportation require a Physical Exam DOT during employment in order for the employee to continue working.",
+    "file": "en__physical-exam-dot.json",
+    "nodes": 105,
+    "headings": 33,
+    "images": 14
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/primary-care/",
+    "lang": "en",
+    "title": "Primary Care - Tampa Bay Family Clinic",
+    "description": "Tampa Bay Family Clinic Primary Care offices are located throughout the Tampa Bay area, so you're never far from the care you need.",
+    "file": "en__primary-care.json",
+    "nodes": 90,
+    "headings": 19,
+    "images": 9
+  },
+  {
+    "url": "https://www.tampabayfamilyclinics.com/privacy-policy/",
+    "lang": "en",
+    "title": "Privacy Policy - Tampa Bay Family Clinic",
+    "description": "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar",
+    "file": "en__privacy-policy.json",
+    "nodes": 95,
+    "headings": 7,
+    "images": 0
+  }
+]
