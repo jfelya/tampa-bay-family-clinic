@@ -40,7 +40,7 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
   class="sticky top-0 z-40 border-b border-border bg-surface/95 backdrop-blur lg:static"
   data-top-bar
 >
-  <Container class="flex h-16 items-center justify-between gap-4 lg:h-20">
+  <Container class="flex h-14 items-center justify-between gap-4 lg:h-16">
     <a href={homeHref} class="inline-flex shrink-0 items-center" aria-label={info.name}>
       <span class="inline-flex rounded-md bg-white p-1 ring-1 ring-ink-900/10">
         <img src={logo.src} alt={info.name} width="180" height="98" class="h-9 w-auto lg:h-12" />
@@ -80,7 +80,7 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
   class="sticky top-0 z-40 hidden border-b border-border bg-surface/95 backdrop-blur lg:block"
   data-nav-bar
 >
-  <Container class="flex h-14 items-center justify-between gap-4">
+  <Container class="flex h-12 items-center justify-between gap-4">
     <div class="flex items-center gap-1">
       {nav.primary.map((item) =>
         item.children ? (
