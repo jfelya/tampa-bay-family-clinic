@@ -107,7 +107,12 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
   </Container>
 </nav>
 
-<MobileDrawer locale={locale} currentPath={currentPath} alternateHref={alternateHref} />
+<MobileDrawer
+  locale={locale}
+  currentPath={currentPath}
+  alternateHref={alternateHref}
+  hasAppointmentForm={hasAppointmentForm}
+/>
 
 <script>
   import { initMenu } from '../../scripts/menu';

@@ -26,6 +26,9 @@ dist/
 # Remove this line if you want the planning docs versioned too.
 _project/
 
+# Competitor / SEO investigations (raw downloads + notes, kept off the repo)
+investigation/
+
 # Editor / OS
 .DS_Store
 Thumbs.db

@@ -16,17 +16,11 @@
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: var(--fs-body);
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-  }
-
-  @media (min-width: 1024px) {
-    body {
-      font-size: 16px;
-    }
   }
 
   h1,
@@ -42,22 +36,22 @@
   }
 
   h1 {
-    font-size: clamp(1.5rem, 4.5vw, 2.75rem);
+    font-size: var(--fs-h1);
     font-weight: 800;
   }
 
   h2 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: var(--fs-h2);
     font-weight: 800;
   }
 
   h3 {
-    font-size: clamp(1.0625rem, 2.2vw, 1.5rem);
+    font-size: var(--fs-h3);
     font-weight: 700;
   }
 
   h4 {
-    font-size: 1.125rem;
+    font-size: var(--fs-h4);
     font-weight: 700;
   }
 
@@ -100,6 +94,31 @@ html.drawer-open body {
    ========================================================================== */
 
 @layer components {
+  /* Fluid section rhythm + type helpers (see theme.css tokens) */
+  .section-sm {
+    padding-block: var(--space-section-sm);
+  }
+
+  .section-md {
+    padding-block: var(--space-section-md);
+  }
+
+  .section-lg {
+    padding-block: var(--space-section-lg);
+  }
+
+  .hero-title {
+    font-size: var(--fs-display);
+  }
+
+  .page-title {
+    font-size: var(--fs-h1);
+  }
+
+  .lead-text {
+    font-size: var(--fs-lead);
+  }
+
   .prose-tbfc {
     color: var(--text-muted);
     line-height: 1.7;

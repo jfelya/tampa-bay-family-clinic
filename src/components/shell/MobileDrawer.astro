@@ -13,13 +13,19 @@ interface Props {
   locale: Locale;
   currentPath: string;
   alternateHref: string;
+  hasAppointmentForm?: boolean;
 }
 
-const { locale, currentPath, alternateHref } = Astro.props;
+const { locale, currentPath, alternateHref, hasAppointmentForm = false } = Astro.props;
 const t = ui[locale];
 const info = site[locale];
 const nav = navigation[locale];
 const homeHref = locale === 'en' ? '/' : '/es/inicio/';
+const appointmentHref = hasAppointmentForm
+  ? '#appointment'
+  : locale === 'en'
+    ? '/contact-us/'
+    : '/es/contactanos/';
 
 const normalize = (path: string) => path.replace(/\/+$/, '') || '/';
 const isActive = (href: string) => normalize(href) === normalize(currentPath);
@@ -40,13 +46,17 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
     data-drawer-panel
     class="absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col border-l border-border bg-surface shadow-lift"
   >
-    <div class="flex h-16 shrink-0 items-center justify-between border-b border-border px-4">
-      <a href={homeHref} class="inline-flex items-center">
+    <div class="flex h-16 shrink-0 items-center justify-between gap-2 border-b border-border px-3">
+      <a href={homeHref} class="inline-flex shrink-0 items-center">
         <span class="inline-flex rounded-md bg-white p-1 ring-1 ring-ink-900/10">
-          <img src={logo.src} alt={info.name} width="150" height="81" class="h-9 w-auto" />
+          <img src={logo.src} alt={info.name} width="150" height="81" class="h-8 w-auto" />
         </span>
       </a>
-      <IconButton label={t.closeMenu} icon="x" variant="outlined" data-drawer-close />
+      <div class="flex items-center gap-1">
+        <LanguageToggle locale={locale} href={alternateHref} variant="light" />
+        <ThemeToggle locale={locale} variant="light" />
+        <IconButton label={t.closeMenu} icon="x" variant="outlined" data-drawer-close />
+      </div>
     </div>
 
     <nav aria-label={t.mobileNavigation} class="flex-1 overflow-y-auto p-4">
@@ -95,12 +105,8 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
       </ul>
     </nav>
 
-    <div class="shrink-0 space-y-4 border-t border-border p-4">
-      <div class="flex items-center justify-between">
-        <LanguageToggle locale={locale} href={alternateHref} variant="light" />
-        <ThemeToggle locale={locale} variant="light" />
-      </div>
-      <Button href={locale === 'en' ? '/contact-us/' : '/es/contactanos/'} fullWidth>
+    <div class="shrink-0 border-t border-border p-4">
+      <Button href={appointmentHref} fullWidth>
         {t.requestAppointment}
       </Button>
     </div>
