@@ -74,7 +74,7 @@ sections:
       - Medical Cannabis Recommendation
       - Digital Cannabis Certification
 
-      #### Just So You Know
+      ### Just So You Know
 
       Your recommendation is only valid for 210 days in Florida, and you will need to recertify your license and incur the fee for another appointment once it expires.
     tone: subtle

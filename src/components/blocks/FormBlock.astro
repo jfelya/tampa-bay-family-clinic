@@ -1,9 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Container from '../primitives/Container.astro';
-import Icon from '../primitives/Icon.astro';
 import Form from '../forms/Form.astro';
-import { site } from '../../data/site';
 import { requireAsset } from '../../lib/assets';
 import type { Locale } from '../../i18n/ui';
 
@@ -12,17 +10,11 @@ interface Props {
   heading?: string;
   body?: string;
   source: string;
-  aside?: {
-    heading?: string;
-    callLabel?: string;
-    emailLabel?: string;
-  };
   tone?: 'default' | 'subtle';
   locale: Locale;
 }
 
-const { variant, heading, body, source, aside, locale } = Astro.props;
-const info = site[locale];
+const { variant, heading, body, source, locale } = Astro.props;
 
 // Primary doctor as the section background (fades into the page background).
 const doctorImage = requireAsset(
@@ -55,38 +47,6 @@ const doctorImage = requireAsset(
       <div class="w-full lg:max-w-xl lg:justify-self-end">
         {heading && <h2>{heading}</h2>}
         {body && <p class="mt-4 text-text-muted">{body}</p>}
-
-        {aside && (
-          <div class="card-mecare mt-6 bg-surface/90 p-6 backdrop-blur-sm">
-            {aside.heading && (
-              <h3 class="font-heading text-base font-bold text-text">{aside.heading}</h3>
-            )}
-            <ul class="mt-3 space-y-3 text-sm">
-              <li>
-                <a href={info.phoneHref} class="group flex items-start gap-3">
-                  <Icon name="phone" size={18} class="mt-0.5 shrink-0 text-brand" />
-                  <span>
-                    <span class="block font-semibold text-text group-hover:text-brand">
-                      {aside.callLabel}
-                    </span>
-                    <span class="block text-text-muted">{info.phone}</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${info.email}`} class="group flex items-start gap-3">
-                  <Icon name="mail" size={18} class="mt-0.5 shrink-0 text-brand" />
-                  <span class="min-w-0">
-                    <span class="block font-semibold text-text group-hover:text-brand">
-                      {aside.emailLabel}
-                    </span>
-                    <span class="block break-all text-text-muted">{info.email}</span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
 
         <div class="mt-6">
           <Form variant={variant} source={source} locale={locale} />

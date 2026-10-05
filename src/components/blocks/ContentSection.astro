@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { md } from '../../lib/markdown';
 import { requireAsset } from '../../lib/assets';
 
@@ -42,22 +43,39 @@ const imageFirst = imagePosition === 'left';
 >
   <Container>
     <div class={hasImages ? 'grid items-start gap-8 lg:grid-cols-2 lg:gap-14' : 'max-w-3xl'}>
-      <div class={hasImages && !imageFirst ? '' : 'lg:order-2'}>
-        <h2 class="mb-5">{heading}</h2>
+      <div class={hasImages && !imageFirst ? '' : 'lg:order-2'} data-reveal>
+        <SectionHeader heading={heading} align="left" class="mb-5" />
         <div class="prose-tbfc max-w-none" set:html={md(body)} />
       </div>
       {hasImages && (
-        <div class={`space-y-6 ${imageFirst ? 'lg:order-1' : 'lg:order-2'}`}>
-          {resolved.map((img) => (
-            <Image
-              src={img.data}
-              alt={img.alt}
-              widths={[420, 640, 900]}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              loading="lazy"
-              class="aspect-[3/2] w-full rounded-xl object-cover shadow-soft"
-            />
-          ))}
+        <div class={`${imageFirst ? 'lg:order-1' : 'lg:order-2'}`} data-reveal>
+          {resolved.length >= 3 ? (
+            <div class="grid grid-cols-2 gap-4 sm:gap-5">
+              {resolved.map((img) => (
+                <Image
+                  src={img.data}
+                  alt={img.alt}
+                  widths={[240, 360, 480]}
+                  sizes="(min-width: 1024px) 25vw, 45vw"
+                  loading="lazy"
+                  class="aspect-square w-full rounded-xl bg-surface object-contain p-3 shadow-card"
+                />
+              ))}
+            </div>
+          ) : (
+            <div class="space-y-6">
+              {resolved.map((img) => (
+                <Image
+                  src={img.data}
+                  alt={img.alt}
+                  widths={[420, 640, 900]}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  class="aspect-[3/2] w-full rounded-xl object-cover shadow-card"
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

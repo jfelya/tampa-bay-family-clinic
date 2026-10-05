@@ -9,10 +9,10 @@
 :root {
   color-scheme: light;
 
-  --bg: #f4f8fb;
-  --bg-subtle: #e7eff6;
-  --surface: #ffffff;
-  --border: #d7e2ec;
+  --bg: #eef4fa;
+  --bg-subtle: #e1ecf5;
+  --surface: #f8fbfe;
+  --border: #d3e0ec;
   --text: #0f172a;
   --text-muted: #475569;
 
@@ -37,7 +37,7 @@
      Values sit within common healthcare/clinic ranges (16px body, 26–44px H1).
      ------------------------------------------------------------------------- */
   --fs-small: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem); /* 13 → 14 */
-  --fs-body: clamp(0.9375rem, 0.9rem + 0.22vw, 1.0625rem); /* 15 → 17 */
+  --fs-body: clamp(0.875rem, 0.85rem + 0.2vw, 1rem); /* 14 → 16 */
   --fs-lead: clamp(1rem, 0.95rem + 0.35vw, 1.25rem); /* 16 → 20 */
   --fs-h4: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem); /* 17 → 20 */
   --fs-h3: clamp(1.1875rem, 1.05rem + 0.7vw, 1.5rem); /* 19 → 24 */

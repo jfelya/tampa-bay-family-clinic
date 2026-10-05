@@ -79,7 +79,7 @@ if (items?.length) {
 
 if (limit) cards = cards.slice(0, limit);
 
-const columns = cards.length > 6 ? 'lg:grid-cols-4' : 'lg:grid-cols-3';
+const columns = 'lg:grid-cols-3';
 ---
 
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
@@ -109,7 +109,7 @@ const columns = cards.length > 6 ? 'lg:grid-cols-4' : 'lg:grid-cols-3';
                   />
                 </span>
               )}
-              <h3 class="font-heading text-lg font-bold text-text transition-colors duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300">
+              <h3 class="font-heading text-lg font-bold text-text [overflow-wrap:anywhere] transition-colors duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300">
                 {card.title}
               </h3>
               <p class="mt-2.5 flex-1 text-sm leading-relaxed text-text-muted">{card.description}</p>

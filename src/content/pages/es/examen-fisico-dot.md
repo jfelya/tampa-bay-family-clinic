@@ -61,43 +61,43 @@ sections:
       - Análisis de orina
       - Examen físico
 
-      ##### 1. Mantenga un régimen de ejercicio
+      ### 1. Mantenga un régimen de ejercicio
 
       Un examen físico del Departamento de Transporte (DOT) es un examen físico que se necesita para las personas que conducen vehículos comerciales. El objetivo de un examen físico del DOT es determinar que las personas que conducen vehículos motorizados comerciales están en buena forma emocional, mental y física.
 
-      ##### 2. Evite las comidas con alto contenido de sodio
+      ### 2. Evite las comidas con alto contenido de sodio
 
       Hay muchos restaurantes y bocadillos adecuados a lo largo de la calle, pero a menudo tienen grandes niveles de sal. El sodio aumenta la presión arterial (PA), lo que puede hacer que falle el examen.
 
-      ##### 3. Evite el azúcar y la cafeína
+      ### 3. Evite el azúcar y la cafeína
 
       El azúcar y la cafeína ayudan a mantenerse alerta y resistente. Sin embargo, también pueden elevar los niveles de presión arterial. Asegúrese de mantenerse alejado de las bebidas energéticas y el café durante al menos 24 horas antes del examen físico DOT.
 
-      ##### 4. Toma un pequeño desayuno
+      ### 4. Toma un pequeño desayuno
 
       Asegúrese de dormir bien y tener un desayuno saludable y pequeño. Evite las comidas más pesadas, ya que pueden aumentar los niveles de azúcar y malinterpretarse como una señal de advertencia de diabetes en el examen.
 
-      ##### Llenar un formulario
+      ### Llenar un formulario
 
       Antes de las pruebas, se le pedirá que complete la primera parte del Formulario de informe de examen médico.
 
-      ##### Prueba de visión
+      ### Prueba de visión
 
       Se requiere que todos los conductores tengan una visión periférica de al menos 70" con una agudeza de 20/40 en cada ojo. Si es necesario, puede usar lentes o anteojos correctivos.
 
-      ##### Prueba de audición
+      ### Prueba de audición
 
       Los conductores deben poder escuchar un "susurro forzado" a una distancia de 5 pies o menos, en ambos oídos. Puede utilizar auriculares si es necesario.
 
-      ##### Presión arterial y frecuencia cardíaca
+      ### Presión arterial y frecuencia cardíaca
 
       El médico controlará su presión arterial en busca de condiciones como la hipertensión. También revisarán su frecuencia cardíaca en busca de irregularidades.
 
-      ##### Análisis de orina
+      ### Análisis de orina
 
       El análisis de orina para DOT Physical no es para pruebas de drogas. Se realiza para verificar su nivel de azúcar y proteínas para determinar si es diabético. También se utiliza para detectar cualquier problema con los riñones.
 
-      ##### Examen físico
+      ### Examen físico
 
       Su médico le hará muchas preguntas. También cubrirán muchas categorías diferentes para el examen físico, incluido el control de sus ojos, oídos, boca, corazón, columna vertebral y más para detectar cualquier condición médica.
     images:

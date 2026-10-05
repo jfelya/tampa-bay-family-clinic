@@ -74,7 +74,7 @@ sections:
       - Recomendación de cannabis medicinal
       - Certificación Digital de Cannabis
 
-      #### Información Importante
+      ### Información Importante
 
       En Florida su recomendación solo es válida por 210 días, y deberá volver a certificar su licencia e incurrir en la tarifa de otra cita una vez que expire.
     tone: subtle

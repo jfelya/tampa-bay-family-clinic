@@ -9,21 +9,16 @@ seo:
   title: Contáctanos - Tampa Bay Family Clinic
   canonical: https://www.tampabayfamilyclinics.com/es/contactanos/
 sections:
-  - type: hero
-    variant: page
+  - type: contactDetails
     heading: Contáctanos
   - type: form
-    variant: appointment
+    variant: contact
+    heading: Escríbenos
+    source: contact-page
+  - type: richText
     heading: Contáctanos Hoy!
     body: Si necesita ayuda médica profesional en el área de Tampa, no dude en ubicarnos y contactarnos. ¡Estaremos encantados de ayudarle!
-    source: contact-page
-  - type: phoneBanner
-    tone: subtle
-  - type: contactDetails
-    heading: |-
-      Escríbenos
-      Te esperamos
-    showPhone: false
+    container: narrow
     tone: subtle
   - type: map
 ---

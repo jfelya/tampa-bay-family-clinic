@@ -150,11 +150,16 @@ function buildSections(nodes) {
 
 function renderBody(section, { includeLinks = true } = {}) {
   const parts = [];
+  const headingBlocks = section._blocks.filter((b) => b.kind === 'h');
+  const minLevel = headingBlocks.length ? Math.min(...headingBlocks.map((b) => b.level)) : 0;
   for (const b of section._blocks) {
     if (b.kind === 'p') parts.push(b.text);
     else if (b.kind === 'ul') parts.push(b.items.map((i) => `- ${i}`).join('\n'));
-    else if (b.kind === 'h') parts.push(`${'#'.repeat(Math.min(b.level + 1, 6))} ${b.text}`);
-    else if (b.kind === 'q') parts.push(`> ${b.text}`);
+    else if (b.kind === 'h') {
+      // Body headings start at h3 and never skip levels (section heading is h2).
+      const level = minLevel ? Math.min(b.level - minLevel + 3, 6) : 3;
+      parts.push(`${'#'.repeat(level)} ${b.text}`);
+    } else if (b.kind === 'q') parts.push(`> ${b.text}`);
   }
   if (includeLinks) {
     for (const l of section._links) {

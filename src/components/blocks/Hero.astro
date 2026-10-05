@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets';
 import Container from '../primitives/Container.astro';
 import Button from '../primitives/Button.astro';
-import Badge from '../primitives/Badge.astro';
 import Icon from '../primitives/Icon.astro';
 import { requireAsset } from '../../lib/assets';
 import type { IconName } from '../../lib/icons';
@@ -77,12 +76,8 @@ const hasBackground = !isHome && Boolean(imageData);
     ></div>
 
     <!-- Subtle diagonal accent over the photo -->
-    <div
-      class="pointer-events-none absolute -bottom-20 -right-10 hidden h-56 w-2/3 rotate-[-8deg] bg-gradient-to-r from-transparent to-primary-700/50 lg:block"
-      aria-hidden="true"
-    ></div>
 
-    <Container class="relative w-full py-10 lg:py-12">
+    <Container size="wide" class="relative w-full py-10 lg:py-12">
       <div class="lg:grid lg:grid-cols-2 lg:gap-12">
         <div class="max-w-xl">
         {eyebrow && (
@@ -114,7 +109,7 @@ const hasBackground = !isHome && Boolean(imageData);
         )}
 
         {features.length > 0 && (
-          <ul class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
+          <ul class="mt-10 grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-4">
             {features.map((feature) => (
               <li class="flex items-start gap-3">
                 <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/40 text-white">
@@ -132,11 +127,16 @@ const hasBackground = !isHome && Boolean(imageData);
     </Container>
   </section>
 ) : (
-  <section
-    class={hasBackground
-      ? 'relative overflow-hidden border-b border-border bg-primary-950'
-      : 'border-b border-border bg-gradient-to-b from-primary-50/70 to-bg dark:from-primary-950/30 dark:to-bg'}
-  >
+  <section class="relative overflow-hidden border-b border-border bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600">
+    <span
+      aria-hidden="true"
+      class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-white/5"
+    ></span>
+    <span
+      aria-hidden="true"
+      class="pointer-events-none absolute -bottom-28 -left-16 h-80 w-80 rounded-full bg-white/5"
+    ></span>
+
     {hasBackground && (
       <div class="absolute inset-0" aria-hidden="true">
         <Image
@@ -148,23 +148,23 @@ const hasBackground = !isHome && Boolean(imageData);
           fetchpriority="high"
           class="h-full w-full object-cover object-center"
         />
-        <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/40 dark:from-ink-950 dark:via-ink-950/90 dark:to-ink-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/75 to-primary-800/40"></div>
       </div>
     )}
 
-    <Container class={hasBackground ? 'relative py-10 lg:py-14' : 'relative py-10 lg:py-14'}>
-      <div class="max-w-3xl">
-        {eyebrow && <Badge variant="accent">{eyebrow}</Badge>}
-        <h1 class="page-title mt-4 font-extrabold text-text">{heading}</h1>
+    <Container class="relative py-14 lg:py-20">
+      <div class="max-w-3xl" data-reveal>
+        {eyebrow && <span class="section-eyebrow !text-white">{eyebrow}</span>}
+        <h1 class="page-title mt-4 font-extrabold text-white">{heading}</h1>
         {subheading && (
-          <p class="lead-text mt-5 max-w-2xl whitespace-pre-line text-text-muted">{subheading}</p>
+          <p class="lead-text mt-5 max-w-2xl whitespace-pre-line text-primary-100">{subheading}</p>
         )}
         {actions.length > 0 && (
           <div class="mt-8 flex flex-wrap gap-3">
             {actions.map((action) => (
               <Button
                 href={action.href}
-                variant={action.variant ?? 'primary'}
+                variant={action.variant === undefined || action.variant === 'primary' ? 'accent' : action.variant}
                 size="lg"
                 icon={action.icon as never}
                 class="max-sm:w-full"

@@ -4,6 +4,7 @@ import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
 import Button from '../primitives/Button.astro';
 import Icon from '../primitives/Icon.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { md } from '../../lib/markdown';
 import { requireAsset } from '../../lib/assets';
 
@@ -42,8 +43,8 @@ const imageFirst = imagePosition === 'left';
 
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-    <div class={imageFirst ? 'lg:order-2' : ''}>
-      <h2>{heading}</h2>
+    <div class={imageFirst ? 'lg:order-2' : ''} data-reveal>
+      <SectionHeader heading={heading} align="left" class="mb-4" />
       <div class="prose-tbfc mt-4 max-w-none" set:html={md(body)} />
       {bullets.length > 0 && (
         <ul class="mt-6 space-y-3">
@@ -65,14 +66,14 @@ const imageFirst = imagePosition === 'left';
         </div>
       )}
     </div>
-    <div class={imageFirst ? 'lg:order-1' : ''}>
+    <div class={imageFirst ? 'lg:order-1' : ''} data-reveal>
       <Image
         src={imageData}
         alt={imageAlt}
         widths={[480, 720, 960]}
         sizes="(min-width: 1024px) 50vw, 100vw"
         loading="lazy"
-        class="aspect-[4/3] w-full rounded-xl object-cover shadow-lift"
+        class="aspect-[4/3] w-full rounded-xl object-cover shadow-card"
       />
     </div>
   </Container>

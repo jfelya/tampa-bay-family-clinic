@@ -48,13 +48,16 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
     </a>
 
     <div class="flex items-center gap-2 sm:gap-4">
-      <a
-        href={info.phoneHref}
+      <button
+        type="button"
+        data-copy-phone={info.phone}
+        data-copied-label={t.copiedPhone}
         class="hidden items-center gap-2 text-sm font-semibold text-text transition-colors duration-200 ease-soft hover:text-brand lg:inline-flex"
+        aria-label={`${t.copyPhone}: ${info.phone}`}
       >
         <Icon name="phone" size={18} class="text-brand" />
-        {info.phone}
-      </a>
+        <span data-copy-label>{info.phone}</span>
+      </button>
       <span class="hidden items-center gap-2 text-sm text-text-muted lg:inline-flex">
         <Icon name="clock" size={18} class="text-brand" />
         {info.hours}
@@ -117,6 +120,8 @@ const isActive = (href: string) => normalize(href) === normalize(currentPath);
 <script>
   import { initMenu } from '../../scripts/menu';
   import { initAppointmentJump } from '../../scripts/form';
+  import { initCopy } from '../../scripts/copy';
   initMenu();
   initAppointmentJump();
+  initCopy();
 </script>

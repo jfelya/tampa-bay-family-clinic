@@ -53,7 +53,7 @@ sections:
   - type: contentSection
     heading: Need a COVID-19 Testing?
     body: |-
-      #### Reasons to Get Tested
+      ### Reasons to Get Tested
 
       - If you have COVID-19 symptoms
       - At least 5 days after known or suspected close contact to COVID-19
@@ -64,7 +64,7 @@ sections:
   - type: contentSection
     heading: Types of Viral Tests
     body: |-
-      #### Laboratory Test
+      ### Laboratory Test
 
       - Sample can either be a nasal swab or saliva
       - Results usually in 1-3 days
@@ -72,7 +72,7 @@ sections:
       - No follow-up test required
       - Common example: PCR test
 
-      #### Rapid Test
+      ### Rapid Test
 
       - Sample is usually a nasal swab
       - Results usually in 15-30 minutes
@@ -120,11 +120,11 @@ sections:
     body: |-
       For a COVID-19 diagnostic test, our health care specialist takes a sample of saliva or a sample of mucus from your nose or throat.
 
-      ##### Saliva sample
+      ### Saliva sample
 
       Few places offer saliva tests. While a saliva sample may be slightly less perceptive than a mucus sample taken with a long nasal swab, a saliva test is easier to do and often less unpleasant. You spit into a tube a few times to provide a sample of your saliva for testing.. The tube is sealed before it is sent to a laboratory for analysis.
 
-      ##### Nose or throat swabs
+      ### Nose or throat swabs
 
       A long nasal swab (nasopharyngeal swab) is recommended, although a shorter or very short nasal swab or throat swab is acceptable. Our healthcare professional inserts a thin, flexible stick with cotton brushes at the back of your throat or at the tip inside your nose to collect a mucus sample.
     tone: subtle
@@ -133,7 +133,7 @@ sections:
     body: |-
       The collection of the sample for the COVID-19 test will only take about 5-15 minutes max. You’ll be in and out.
 
-      #### I tested positive; what do I do?
+      ### I tested positive; what do I do?
 
       - Stay at home.
       - Isolate yourself from other people.

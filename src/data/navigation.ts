@@ -32,7 +32,6 @@ export const navigation: Record<'en' | 'es', LocaleNavigation> = {
         label: 'Services',
         href: '/our-services/',
         children: [
-          { label: 'All Services', href: '/our-services/' },
           { label: 'Primary Care', href: '/primary-care/' },
           { label: 'Immigration Medical Exam', href: '/immigration-medical-exam-tampa/' },
           { label: 'Physical Exam DOT', href: '/physical-exam-dot/' },

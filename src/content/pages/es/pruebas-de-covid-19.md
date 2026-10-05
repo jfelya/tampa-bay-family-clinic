@@ -51,7 +51,7 @@ sections:
   - type: contentSection
     heading: ¿Necesita una prueba de COVID-19?
     body: |-
-      #### Razones para hacerse la prueba
+      ### Razones para hacerse la prueba
 
       - Si tiene síntomas de COVID-19
       - Al menos 5 días después de un contacto cercano conocido o sospechado con COVID-19
@@ -62,7 +62,7 @@ sections:
   - type: contentSection
     heading: Tipos de pruebas virales
     body: |-
-      #### Prueba de laboratorio
+      ### Prueba de laboratorio
 
       - La muestra puede ser un hisopo nasal o saliva
       - Resultados generalmente en 1-3 días
@@ -70,7 +70,7 @@ sections:
       - No se requiere prueba de seguimiento
       - Ejemplo común: prueba PCR
 
-      #### Prueba rápida
+      ### Prueba rápida
 
       - La muestra suele ser un hisopo nasal
       - Resultados generalmente en 15-30 minutos
@@ -118,11 +118,11 @@ sections:
     body: |-
       Para una prueba de diagnóstico de COVID-19, nuestro especialista en atención médica toma una muestra de saliva o una muestra de mucosidad de su nariz o garganta.
 
-      ##### Muestra de saliva
+      ### Muestra de saliva
 
       Pocos lugares ofrecen pruebas de saliva. Si bien una muestra de saliva puede ser un poco menos perceptiva que una muestra de moco tomada con un hisopo nasal largo, una prueba de saliva es más fácil de hacer y, a menudo, menos desagradable. Usted escupe en un tubo varias veces para proporcionar una muestra de su saliva para analizarla. El tubo se sella antes de enviarlo a un laboratorio para su análisis.
 
-      ##### Hisopos de nariz o garganta
+      ### Hisopos de nariz o garganta
 
       Se recomienda un hisopo nasal largo (hisopo nasofaríngeo), aunque es aceptable un hisopo nasal más corto o muy corto o un hisopo de garganta. Nuestro profesional de la salud inserta un palito delgado y flexible con cepillos de algodón en la parte posterior de la garganta o en la punta dentro de la nariz para recolectar una muestra de moco.
     tone: subtle
@@ -131,7 +131,7 @@ sections:
     body: |-
       La recolección de la muestra para la prueba de COVID-19 solo tomará entre 5 y 15 minutos como máximo. Estarás dentro y fuera.
 
-      #### Di positivo; ¿Qué debo hacer?
+      ### Di positivo; ¿Qué debo hacer?
 
       - Quédate en casa.
       - Aíslese de otras personas.

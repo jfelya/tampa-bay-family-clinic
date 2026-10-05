@@ -40,11 +40,11 @@ sections:
   - type: contentSection
     heading: Benefits Of Our Physical Exam DOT
     body: |-
-      #### Disease detection
+      ### Disease detection
 
       Since you will be undergoing many tests during a DOT Physical, there is a strong chance of detecting underlying diseases. If it is detected early, there is a greater chance of treating it.
 
-      #### Improved lifestyle
+      ### Improved lifestyle
 
       If you want to pass the DOT physical, you must be healthy in general. This forces you to eat a well-balanced diet, get enough sleep, minimize alcohol and tobacco, and aim for a better, healthier lifestyle.
     images:
@@ -65,43 +65,43 @@ sections:
       - Urinalysis
       - Physical Examination
 
-      ##### 1. Maintain An Exercise Regimen
+      ### 1. Maintain An Exercise Regimen
 
       A Department of Transportation (DOT) physical is a physical exam that is needed for people who drive commercial vehicles. The objective of a DOT physical is to determine that people who are driving commercial motor vehicles are emotionally, mentally and physically fit.
 
-      ##### 2. Avoid High-Sodium Meals
+      ### 2. Avoid High-Sodium Meals
 
       There are a lot of suitable restaurants and snacks up and down the road, but they often have big salt levels. Sodium increases your blood pressure (BP), which can cause you to fail the exam.
 
-      ##### 3. Avoid Sugar And Caffeine
+      ### 3. Avoid Sugar And Caffeine
 
       Sugar and caffeine help stay alert and resilient . Nevertheless, they can also raise blood pressure levels. Make sure to keep away from energy drinks and coffee for at least 24 hours before the DOT physical.
 
-      ##### 4. Have A Small Breakfast
+      ### 4. Have A Small Breakfast
 
       Be sure to sleep well and have a healthy and small breakfast. Avoid heavier meals since they can increase sugar levels and get misinterpreted as a diabetes warning sign on the exam.
 
-      ##### Filling Out A Form
+      ### Filling Out A Form
 
       Before the tests, you'll be asked to fill out the first part of the Medical Examination Report Form.
 
-      ##### Vision Test
+      ### Vision Test
 
       All drivers are required to have at least 70" peripheral vision with 20/40 acuity in each eye. If necessary, you may wear corrective lenses or glasses.
 
-      ##### Hearing Test
+      ### Hearing Test
 
       Drivers must be able to hear a "forced whisper" at a distance of 5 feet or less, in both ears. You can use headphones if necessary.
 
-      ##### Blood Pressure And Heart Rate
+      ### Blood Pressure And Heart Rate
 
       The medical examiner will monitor your blood pressure for conditions such as hypertension. They will also check your heart rate for irregularities.
 
-      ##### Urinalysis
+      ### Urinalysis
 
       Urinalysis for DOT Physical is not for drug testing. It is done to check your level of sugar and protein to determine if you are diabetic. It is also used to check for any problems with the kidneys.
 
-      ##### Physical Examination
+      ### Physical Examination
 
       Your medical examiner will ask you many questions. They will also cover many different categories for the physical exam, including checking your eyes, ears, mouth, heart, spine, and more for any medical conditions.
     images:
