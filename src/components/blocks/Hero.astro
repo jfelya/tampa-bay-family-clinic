@@ -47,8 +47,8 @@ const hasBackground = !isHome && Boolean(imageData);
 ---
 
 {isHome ? (
-  <section class="relative overflow-hidden bg-primary-950 text-white">
-    <!-- Photo on the right, fading into the blue background -->
+  <section class="relative flex items-center overflow-hidden bg-primary-950 text-white lg:min-h-[calc(100vh-8.5rem)]">
+    <!-- Photo on the right, fading into the blue background on its left half -->
     {imageData && (
       <div class="absolute inset-0 lg:left-auto lg:right-0 lg:w-[58%]">
         <Image
@@ -60,7 +60,7 @@ const hasBackground = !isHome && Boolean(imageData);
           fetchpriority="high"
           class="h-full w-full object-cover object-center"
         />
-        <div class="absolute inset-0 bg-primary-950/80 lg:bg-gradient-to-r lg:from-primary-950 lg:via-primary-950/60 lg:to-transparent"></div>
+        <div class="absolute inset-0 bg-primary-950/80 lg:bg-gradient-to-r lg:from-primary-950 lg:via-transparent lg:via-50% lg:to-transparent"></div>
       </div>
     )}
 
@@ -70,7 +70,7 @@ const hasBackground = !isHome && Boolean(imageData);
       aria-hidden="true"
     ></div>
 
-    <Container class="relative py-14 lg:py-28">
+    <Container class="relative w-full py-12 lg:py-16">
       <div class="max-w-xl lg:max-w-2xl">
         {eyebrow && (
           <span class="inline-flex items-center rounded-full bg-accent-500 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-950">
