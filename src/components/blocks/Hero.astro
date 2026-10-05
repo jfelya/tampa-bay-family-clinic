@@ -48,7 +48,7 @@ const hasBackground = !isHome && Boolean(imageData);
 
 {isHome ? (
   <section class="relative flex items-center overflow-hidden bg-primary-950 text-white lg:min-h-[calc(100vh-7rem)]">
-    <!-- Photo on the right, fading into the blue background on its left half -->
+    <!-- Photo on the right -->
     {imageData && (
       <div class="absolute inset-0 lg:left-auto lg:right-0 lg:w-[58%]">
         <Image
@@ -60,9 +60,20 @@ const hasBackground = !isHome && Boolean(imageData);
           fetchpriority="high"
           class="h-full w-full object-cover object-center"
         />
-        <div class="absolute inset-0 bg-primary-950/80 lg:bg-gradient-to-r lg:from-primary-950 lg:via-transparent lg:via-30% lg:to-transparent"></div>
       </div>
     )}
+
+    <!-- Mobile: keep text legible over the photo -->
+    <div class="pointer-events-none absolute inset-0 bg-primary-950/80 lg:hidden" aria-hidden="true"></div>
+
+    <!--
+      Desktop fade: fully clear on the right; the blue only builds up toward
+      the left, reaching full color at the left edge (transparent by 50%).
+    -->
+    <div
+      class="pointer-events-none absolute inset-0 hidden lg:block lg:bg-gradient-to-r lg:from-primary-950 lg:from-0% lg:via-primary-950/45 lg:via-28% lg:to-transparent lg:to-50%"
+      aria-hidden="true"
+    ></div>
 
     <!-- Subtle diagonal accent over the photo -->
     <div
