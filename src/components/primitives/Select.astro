@@ -21,7 +21,7 @@ const normalized = options.map((option) =>
   required={required}
   aria-invalid="false"
   aria-describedby={`${id}-error`}
-  class={`w-full appearance-none rounded-md border border-border bg-surface px-3.5 py-2.5 pr-10 text-text shadow-sm transition-colors duration-200 ease-soft focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 aria-[invalid=true]:border-error ${className}`}
+  class={`w-full appearance-none rounded-lg border border-transparent bg-bg-subtle px-4 py-3 pr-10 text-text transition-all duration-300 ease-soft focus:border-primary-400 focus:bg-surface focus:outline-none focus:ring-2 focus:ring-brand/25 aria-[invalid=true]:border-error aria-[invalid=true]:bg-error-subtle/40 ${className}`}
 >
   {placeholder && <option value="">{placeholder}</option>}
   {normalized.map((option) => <option value={option.value}>{option.label}</option>)}

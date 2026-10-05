@@ -1,6 +1,7 @@
 ---
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { requireAsset } from '../../lib/assets';
 import { site } from '../../data/site';
 import { ui, type Locale } from '../../i18n/ui';
@@ -46,29 +47,41 @@ const cards = showPhone ? allCards : allCards.filter((card) => card.label !== t.
 
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container>
-    {heading && <h2 class="mb-10 whitespace-pre-line text-center">{heading}</h2>}
-    <ul class={`grid gap-6 sm:grid-cols-2 ${cards.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
+    {heading && (
+      <SectionHeader
+        heading={heading}
+        align="center"
+        class="mb-12 [&_h2]:whitespace-pre-line"
+      />
+    )}
+    <ul
+      class={`reveal-stagger grid gap-7 sm:grid-cols-2 ${cards.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}
+    >
       {cards.map((card) => (
-        <li class="min-w-0 rounded-lg border border-border bg-surface p-6 text-center shadow-soft transition-all duration-200 ease-soft hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-lift dark:hover:border-primary-800">
-          <img
-            src={requireAsset(card.icon).src}
-            alt=""
-            width="48"
-            height="48"
-            class="mx-auto h-12 w-12 object-contain"
-            loading="lazy"
-          />
-          <h3 class="mt-4 font-heading text-base font-bold text-text">{card.label}</h3>
-          {card.href ? (
-            <a
-              href={card.href}
-              class="mt-1 block text-sm text-text-muted [overflow-wrap:anywhere] transition-colors duration-200 ease-soft hover:text-brand"
-            >
-              {card.value}
-            </a>
-          ) : (
-            <p class="mt-1 text-sm text-text-muted [overflow-wrap:anywhere]">{card.value}</p>
-          )}
+        <li data-reveal class="min-w-0">
+          <div class="card-mecare card-mecare-hover flex h-full flex-col items-center p-7 text-center">
+            <span class="icon-circle h-16 w-16">
+              <img
+                src={requireAsset(card.icon).src}
+                alt=""
+                width="40"
+                height="40"
+                class="h-10 w-10 object-contain"
+                loading="lazy"
+              />
+            </span>
+            <h3 class="mt-5 font-heading text-base font-bold text-text">{card.label}</h3>
+            {card.href ? (
+              <a
+                href={card.href}
+                class="mt-1.5 block text-sm text-text-muted [overflow-wrap:anywhere] transition-colors duration-300 ease-soft hover:text-brand"
+              >
+                {card.value}
+              </a>
+            ) : (
+              <p class="mt-1.5 text-sm text-text-muted [overflow-wrap:anywhere]">{card.value}</p>
+            )}
+          </div>
         </li>
       ))}
     </ul>

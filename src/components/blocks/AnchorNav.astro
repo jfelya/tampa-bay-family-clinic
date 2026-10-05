@@ -10,13 +10,13 @@ const { heading, items } = Astro.props;
 
 <nav
   aria-label={heading ?? 'On this page'}
-  class="border-b border-border bg-bg-subtle/95 backdrop-blur"
+  class="border-b border-border/70 bg-bg-subtle/95 backdrop-blur"
 >
-  <div class="mx-auto flex max-w-content flex-wrap gap-2 px-4 py-3 sm:px-6 lg:px-8">
+  <div class="mx-auto flex max-w-content flex-wrap gap-3 px-4 py-4 sm:px-6 lg:px-8">
     {items.map((item) => (
       <a
         href={item.href}
-        class="inline-flex min-h-[36px] items-center rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-medium text-text transition-colors duration-200 ease-soft hover:border-primary-200 hover:text-brand dark:hover:border-primary-800"
+        class="inline-flex min-h-[40px] items-center rounded-lg bg-surface px-5 py-2 text-sm font-semibold text-text shadow-card transition-all duration-300 ease-soft hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-primary-700 hover:to-primary-500 hover:text-white hover:shadow-glow"
       >
         {item.label}
       </a>

@@ -1,6 +1,7 @@
 ---
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { site } from '../../data/site';
 import { ui, type Locale } from '../../i18n/ui';
 
@@ -17,13 +18,17 @@ const t = ui[locale];
 
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container>
-    {heading && <h2 class="text-center">{heading}</h2>}
-    {body && <p class="mx-auto mt-4 max-w-2xl text-center text-text-muted">{body}</p>}
+    {(heading || body) && (
+      <div class="mb-10" data-reveal>
+        <SectionHeader heading={heading ?? t.mapTitle} intro={body} />
+      </div>
+    )}
     <div
-      class="relative mt-8 aspect-[16/10] overflow-hidden rounded-xl border border-border bg-bg-subtle lg:aspect-[21/9]"
+      class="relative mt-2 aspect-[16/10] overflow-hidden rounded-xl border border-border/70 bg-bg-subtle shadow-card lg:aspect-[21/9]"
       data-map
       data-map-src={site[locale].mapEmbed}
       data-map-title={t.mapTitle}
+      data-reveal
     >
       <p class="absolute inset-0 grid place-items-center text-sm text-text-muted" data-map-placeholder>
         {t.mapLoading}

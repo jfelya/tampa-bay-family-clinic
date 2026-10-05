@@ -17,25 +17,23 @@ interface Props {
 const { items, allowMultiple = false, defaultOpen, name = 'accordion', class: className = '' } = Astro.props;
 ---
 
-<div class={`divide-y divide-border overflow-hidden rounded-lg border border-border bg-surface ${className}`}>
+<div class={`space-y-3 ${className}`}>
   {items.map((item, index) => (
     <details
       name={allowMultiple ? undefined : `${name}-group`}
       open={defaultOpen === index}
-      class="group"
+      class="card-mecare group overflow-hidden open:border-primary-200 open:shadow-card-hover dark:open:border-primary-800"
     >
       <summary
-        class="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-heading font-semibold text-text transition-colors duration-200 ease-soft hover:bg-bg-subtle focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus-ring [&::-webkit-details-marker]:hidden"
+        class="flex min-h-[60px] cursor-pointer list-none items-center justify-between gap-4 px-6 py-4 font-heading text-base font-bold text-text transition-colors duration-300 ease-soft hover:text-primary-700 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus-ring dark:hover:text-primary-300 [&::-webkit-details-marker]:hidden"
       >
         <span>{item.question}</span>
-        <Icon
-          name="chevron-down"
-          size={20}
-          class="shrink-0 text-text-muted transition-transform duration-200 ease-soft group-open:rotate-180"
-        />
+        <span class="icon-circle h-9 w-9 transition-transform duration-300 ease-soft group-open:rotate-180">
+          <Icon name="chevron-down" size={18} />
+        </span>
       </summary>
-      <div class="px-5 pb-5 text-text-muted">
-        <p class="whitespace-pre-line">{item.answer}</p>
+      <div class="border-t border-border/70 px-6 py-5 text-text-muted">
+        <p class="whitespace-pre-line leading-relaxed">{item.answer}</p>
       </div>
     </details>
   ))}

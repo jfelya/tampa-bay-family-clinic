@@ -2,6 +2,7 @@
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
 import Accordion from '../primitives/Accordion.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 
 interface Props {
   heading?: string;
@@ -16,11 +17,16 @@ const { heading, intro, items, tone = 'default' } = Astro.props;
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container size="narrow">
     {(heading || intro) && (
-      <div class="mb-8 text-center">
-        {heading && <h2>{heading}</h2>}
-        {intro && <p class="mt-4 text-text-muted">{intro}</p>}
+      <div class="mb-10">
+        {heading ? (
+          <SectionHeader heading={heading} intro={intro} />
+        ) : (
+          <p class="text-center text-text-muted">{intro}</p>
+        )}
       </div>
     )}
-    <Accordion items={items} />
+    <div class="reveal-stagger">
+      <Accordion items={items} />
+    </div>
   </Container>
 </Section>

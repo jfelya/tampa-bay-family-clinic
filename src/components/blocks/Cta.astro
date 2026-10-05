@@ -2,6 +2,7 @@
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
 import Button from '../primitives/Button.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { md } from '../../lib/markdown';
 
 interface Action {
@@ -21,27 +22,40 @@ interface Props {
 const { heading, body, actions = [], tone = 'primary' } = Astro.props;
 
 const tones = {
-  primary: 'bg-primary-950 text-white',
-  accent: 'bg-accent-500 text-accent-ink',
+  primary: 'bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600 text-white',
+  accent: 'bg-gradient-to-r from-accent-500 to-accent-400 text-accent-ink',
   subtle: 'bg-bg-subtle text-text',
 };
 
 const defaultActionVariant = tone === 'accent' ? 'primary' : 'accent';
+const isDark = tone === 'primary';
 ---
 
-<section class={`${tones[tone]}`}>
-  <Container class="flex flex-col items-center gap-6 py-14 text-center lg:py-20">
-    <div class="max-w-2xl">
-      <h2 class={tone === 'subtle' ? 'text-text' : 'text-white'}>{heading}</h2>
+<section class={`relative overflow-hidden ${tones[tone]}`}>
+  {isDark && (
+    <>
+      <span
+        aria-hidden="true"
+        class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-white/5"
+      ></span>
+      <span
+        aria-hidden="true"
+        class="pointer-events-none absolute -bottom-28 -left-16 h-80 w-80 rounded-full bg-white/5"
+      ></span>
+    </>
+  )}
+  <Container class="relative flex flex-col items-center gap-7 py-16 text-center lg:py-24">
+    <div class="max-w-2xl" data-reveal>
+      <SectionHeader heading={heading} tone={isDark ? 'dark' : 'default'} />
       {body && (
         <div
-          class={`prose-tbfc mt-4 ${tone === 'primary' ? 'text-primary-100' : ''}`}
+          class={`prose-tbfc mt-5 ${isDark ? 'text-primary-100' : ''}`}
           set:html={md(body)}
         />
       )}
     </div>
     {actions.length > 0 && (
-      <div class="flex flex-wrap justify-center gap-3">
+      <div class="flex flex-wrap justify-center gap-3" data-reveal>
         {actions.map((action) => (
           <Button
             href={action.href}
