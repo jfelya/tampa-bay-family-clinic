@@ -61,19 +61,19 @@ sections:
       - Análisis de orina
       - Examen físico
 
-      ### 1. Mantenga un régimen de ejercicio
+      ### Mantenga un régimen de ejercicio
 
       Un examen físico del Departamento de Transporte (DOT) es un examen físico que se necesita para las personas que conducen vehículos comerciales. El objetivo de un examen físico del DOT es determinar que las personas que conducen vehículos motorizados comerciales están en buena forma emocional, mental y física.
 
-      ### 2. Evite las comidas con alto contenido de sodio
+      ### Evite las comidas con alto contenido de sodio
 
       Hay muchos restaurantes y bocadillos adecuados a lo largo de la calle, pero a menudo tienen grandes niveles de sal. El sodio aumenta la presión arterial (PA), lo que puede hacer que falle el examen.
 
-      ### 3. Evite el azúcar y la cafeína
+      ### Evite el azúcar y la cafeína
 
       El azúcar y la cafeína ayudan a mantenerse alerta y resistente. Sin embargo, también pueden elevar los niveles de presión arterial. Asegúrese de mantenerse alejado de las bebidas energéticas y el café durante al menos 24 horas antes del examen físico DOT.
 
-      ### 4. Toma un pequeño desayuno
+      ### Toma un pequeño desayuno
 
       Asegúrese de dormir bien y tener un desayuno saludable y pequeño. Evite las comidas más pesadas, ya que pueden aumentar los niveles de azúcar y malinterpretarse como una señal de advertencia de diabetes en el examen.
 

@@ -65,19 +65,19 @@ sections:
       - Urinalysis
       - Physical Examination
 
-      ### 1. Maintain An Exercise Regimen
+      ### Maintain An Exercise Regimen
 
       A Department of Transportation (DOT) physical is a physical exam that is needed for people who drive commercial vehicles. The objective of a DOT physical is to determine that people who are driving commercial motor vehicles are emotionally, mentally and physically fit.
 
-      ### 2. Avoid High-Sodium Meals
+      ### Avoid High-Sodium Meals
 
       There are a lot of suitable restaurants and snacks up and down the road, but they often have big salt levels. Sodium increases your blood pressure (BP), which can cause you to fail the exam.
 
-      ### 3. Avoid Sugar And Caffeine
+      ### Avoid Sugar And Caffeine
 
       Sugar and caffeine help stay alert and resilient . Nevertheless, they can also raise blood pressure levels. Make sure to keep away from energy drinks and coffee for at least 24 hours before the DOT physical.
 
-      ### 4. Have A Small Breakfast
+      ### Have A Small Breakfast
 
       Be sure to sleep well and have a healthy and small breakfast. Avoid heavier meals since they can increase sugar levels and get misinterpreted as a diabetes warning sign on the exam.
 
