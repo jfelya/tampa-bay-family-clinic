@@ -3,13 +3,20 @@ import { Image } from 'astro:assets';
 import Container from '../primitives/Container.astro';
 import Button from '../primitives/Button.astro';
 import Badge from '../primitives/Badge.astro';
+import Icon from '../primitives/Icon.astro';
 import { requireAsset } from '../../lib/assets';
+import type { IconName } from '../../lib/icons';
 
 interface Action {
   label: string;
   href: string;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   icon?: string;
+}
+
+interface Feature {
+  label: string;
+  icon?: IconName;
 }
 
 interface Props {
@@ -20,6 +27,7 @@ interface Props {
   image?: string;
   imageAlt?: string;
   actions?: Action[];
+  features?: Feature[];
 }
 
 const {
@@ -30,6 +38,7 @@ const {
   image,
   imageAlt = '',
   actions = [],
+  features = [],
 } = Astro.props;
 
 const isHome = variant === 'home';
@@ -37,73 +46,121 @@ const imageData = image ? requireAsset(image) : undefined;
 const hasBackground = !isHome && Boolean(imageData);
 ---
 
-<section
-  class={isHome
-    ? 'border-b border-border bg-gradient-to-b from-primary-50 to-bg dark:from-primary-950/40 dark:to-bg'
-    : hasBackground
-      ? 'relative overflow-hidden border-b border-border bg-primary-950'
-      : 'border-b border-border bg-gradient-to-b from-primary-50/70 to-bg dark:from-primary-950/30 dark:to-bg'}
->
-  {hasBackground && (
-    <div class="absolute inset-0" aria-hidden="true">
-      <Image
-        src={imageData!}
-        alt=""
-        widths={[960, 1440, 1920]}
-        sizes="100vw"
-        loading="eager"
-        fetchpriority="high"
-        class="h-full w-full object-cover object-center"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/40 dark:from-ink-950 dark:via-ink-950/90 dark:to-ink-950/40"></div>
-    </div>
-  )}
-
-  <Container
-    class={isHome
-      ? 'grid items-center gap-10 py-10 lg:grid-cols-2 lg:gap-16 lg:py-16'
-      : hasBackground
-        ? 'relative py-10 lg:py-14'
-        : 'relative py-10 lg:py-14'}
-  >
-    <div class={isHome ? '' : 'max-w-3xl'}>
-      {eyebrow && <Badge variant="accent">{eyebrow}</Badge>}
-      <h1 class={`mt-4 font-extrabold text-text ${isHome ? 'hero-title' : 'page-title'}`}>
-        {heading}
-      </h1>
-      {subheading && (
-        <p class="lead-text mt-5 max-w-2xl whitespace-pre-line text-text-muted">
-          {subheading}
-        </p>
-      )}
-      {actions.length > 0 && (
-        <div class="mt-8 flex flex-wrap gap-3">
-          {actions.map((action) => (
-            <Button
-              href={action.href}
-              variant={action.variant ?? 'primary'}
-              size="lg"
-              icon={action.icon as never}
-              class="max-sm:w-full"
-            >
-              {action.label}
-            </Button>
-          ))}
-        </div>
-      )}
-    </div>
-    {isHome && imageData && (
-      <div class="relative">
+{isHome ? (
+  <section class="relative overflow-hidden bg-primary-950 text-white">
+    <!-- Photo on the right, fading into the blue background -->
+    {imageData && (
+      <div class="absolute inset-0 lg:left-auto lg:right-0 lg:w-[58%]">
         <Image
           src={imageData}
           alt={imageAlt}
-          widths={[480, 720, 960]}
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          widths={[720, 1080, 1440]}
+          sizes="(min-width: 1024px) 58vw, 100vw"
           loading="eager"
           fetchpriority="high"
-          class="aspect-[4/3] w-full rounded-xl object-cover shadow-lift"
+          class="h-full w-full object-cover object-center"
         />
+        <div class="absolute inset-0 bg-primary-950/80 lg:bg-gradient-to-r lg:from-primary-950 lg:via-primary-950/60 lg:to-transparent"></div>
       </div>
     )}
-  </Container>
-</section>
+
+    <!-- Subtle diagonal accent over the photo -->
+    <div
+      class="pointer-events-none absolute -bottom-20 -right-10 hidden h-56 w-2/3 rotate-[-8deg] bg-gradient-to-r from-transparent to-primary-700/50 lg:block"
+      aria-hidden="true"
+    ></div>
+
+    <Container class="relative py-14 lg:py-28">
+      <div class="max-w-xl lg:max-w-2xl">
+        {eyebrow && (
+          <span class="inline-flex items-center rounded-full bg-accent-500 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-950">
+            {eyebrow}
+          </span>
+        )}
+
+        <h1 class="hero-title mt-5 font-extrabold text-white">{heading}</h1>
+
+        {subheading && (
+          <p class="lead-text mt-5 max-w-xl whitespace-pre-line text-primary-100">{subheading}</p>
+        )}
+
+        {actions.length > 0 && (
+          <div class="mt-8 flex flex-wrap gap-3">
+            {actions.map((action) => (
+              <Button
+                href={action.href}
+                variant="inverse"
+                size="lg"
+                icon={action.icon as never}
+                iconPosition="right"
+              >
+                {action.label}
+              </Button>
+            ))}
+          </div>
+        )}
+
+        {features.length > 0 && (
+          <ul class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
+            {features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/40 text-white">
+                  <Icon name={feature.icon ?? 'check'} size={18} />
+                </span>
+                <span class="whitespace-pre-line text-xs font-medium leading-snug text-primary-100">
+                  {feature.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </Container>
+  </section>
+) : (
+  <section
+    class={hasBackground
+      ? 'relative overflow-hidden border-b border-border bg-primary-950'
+      : 'border-b border-border bg-gradient-to-b from-primary-50/70 to-bg dark:from-primary-950/30 dark:to-bg'}
+  >
+    {hasBackground && (
+      <div class="absolute inset-0" aria-hidden="true">
+        <Image
+          src={imageData!}
+          alt=""
+          widths={[960, 1440, 1920]}
+          sizes="100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="h-full w-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/40 dark:from-ink-950 dark:via-ink-950/90 dark:to-ink-950/40"></div>
+      </div>
+    )}
+
+    <Container class={hasBackground ? 'relative py-10 lg:py-14' : 'relative py-10 lg:py-14'}>
+      <div class="max-w-3xl">
+        {eyebrow && <Badge variant="accent">{eyebrow}</Badge>}
+        <h1 class="page-title mt-4 font-extrabold text-text">{heading}</h1>
+        {subheading && (
+          <p class="lead-text mt-5 max-w-2xl whitespace-pre-line text-text-muted">{subheading}</p>
+        )}
+        {actions.length > 0 && (
+          <div class="mt-8 flex flex-wrap gap-3">
+            {actions.map((action) => (
+              <Button
+                href={action.href}
+                variant={action.variant ?? 'primary'}
+                size="lg"
+                icon={action.icon as never}
+                class="max-sm:w-full"
+              >
+                {action.label}
+              </Button>
+            ))}
+          </div>
+        )}
+      </div>
+    </Container>
+  </section>
+)}

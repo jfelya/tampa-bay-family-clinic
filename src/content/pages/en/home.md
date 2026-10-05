@@ -13,12 +13,31 @@ sections:
     variant: home
     eyebrow: Your health is our priority
     heading: Tampa Bay Family Clinic
+    subheading: Tampa Bay Family Clinic is committed to providing quality care to all Tampa, FL and surrounding areas.
     image: legacy/wp-content-uploads-2022-06-doctor-showing-patient-where-to-sit-Tampa-Florida-2-2-174dec96ab.webp
     imageAlt: Doctor showing a patient where to sit
     actions:
       - label: View Our Services
         href: /our-services/
         variant: secondary
+        icon: arrow-right
+    features:
+      - label: |-
+          Care
+          for the whole family
+        icon: users
+      - label: |-
+          We accept
+          most insurances
+        icon: shield-check
+      - label: |-
+          Experienced
+          doctors
+        icon: heart-pulse
+      - label: |-
+          Flexible hours
+          for your convenience
+        icon: clock
   - type: featureList
     columns: 2
     tone: subtle

@@ -32,6 +32,16 @@ const section = z.discriminatedUnion('type', [
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     actions: z.array(action).default([]),
+    features: z
+      .array(
+        z.object({
+          label: z.string(),
+          icon: z
+            .enum(['users', 'shield-check', 'heart-pulse', 'clock', 'check', 'calendar'])
+            .optional(),
+        })
+      )
+      .default([]),
   }),
   z.object({
     type: z.literal('richText'),

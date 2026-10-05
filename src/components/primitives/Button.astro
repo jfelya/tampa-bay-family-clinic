@@ -3,7 +3,7 @@ import Icon from './Icon.astro';
 import type { IconName } from '../../lib/icons';
 
 interface Props {
-  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'link' | 'inverse';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   type?: 'button' | 'submit';
@@ -43,6 +43,7 @@ const variants: Record<NonNullable<Props['variant']>, string> = {
   secondary:
     'border border-border bg-surface text-text hover:bg-bg-subtle active:bg-ink-100 dark:active:bg-ink-800',
   accent: 'bg-accent-500 text-accent-ink hover:bg-accent-600 active:bg-accent-700',
+  inverse: 'bg-white text-primary-800 hover:bg-primary-50 active:bg-primary-100',
   ghost: 'text-brand hover:bg-primary-50 dark:hover:bg-primary-950/50',
   link: 'text-brand underline-offset-4 hover:underline !p-0 !min-h-0 !rounded-none',
 };
