@@ -38,18 +38,6 @@ sections:
           Horarios flexibles
           para tu comodidad
         icon: clock
-  - type: featureList
-    columns: 2
-    tone: subtle
-    items:
-      - title: Cuidado Primario
-        description: Reciba los servicios médicos que necesitas con nuestra atención primaria.
-        image: legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp
-        imageAlt: Cuidado primario
-      - title: Pruebas de Laboratorio
-        description: ¡Hacerse una prueba de laboratorio es fácil! En general, podrá entrar y salir en menos 15 minutos.
-        image: legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp
-        imageAlt: Pruebas de laboratorio
   - type: serviceGrid
     heading: Tu Centro de Salud Familiar
     keys:

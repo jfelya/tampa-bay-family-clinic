@@ -38,18 +38,6 @@ sections:
           Flexible hours
           for your convenience
         icon: clock
-  - type: featureList
-    columns: 2
-    tone: subtle
-    items:
-      - title: Primary Care
-        description: Receive the medical services you need with our primary care.
-        image: legacy/wp-content-uploads-2022-03-doctor-Tampa-Family-Clinics-icon-1-cabd04b892.webp
-        imageAlt: Primary care
-      - title: Laboratory Testing
-        description: Getting a lab test is easy! Mostly, we'll have you in and out in 15 minutes.
-        image: legacy/wp-content-uploads-2022-03-blood-tube-Tampa-Lab-Testing-70916346a6.webp
-        imageAlt: Laboratory testing
   - type: serviceGrid
     heading: Your Family Health Center
     keys:

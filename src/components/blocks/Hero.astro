@@ -67,11 +67,12 @@ const hasBackground = !isHome && Boolean(imageData);
     <div class="pointer-events-none absolute inset-0 bg-primary-950/80 lg:hidden" aria-hidden="true"></div>
 
     <!--
-      Desktop fade: fully clear on the right; the blue only builds up toward
-      the left, reaching full color at the left edge (transparent by 50%).
+      Desktop fade: fully clear on the right; the blue builds smoothly toward
+      the left — solid at the far left, easing out to transparent past ~60%.
     -->
     <div
-      class="pointer-events-none absolute inset-0 hidden lg:block lg:bg-gradient-to-r lg:from-primary-950 lg:from-0% lg:via-primary-950/45 lg:via-28% lg:to-transparent lg:to-50%"
+      class="pointer-events-none absolute inset-0 hidden lg:block"
+      style="background: linear-gradient(to right, #07273f 0%, #07273f 18%, rgba(7,39,63,0.9) 28%, rgba(7,39,63,0.66) 38%, rgba(7,39,63,0.4) 46%, rgba(7,39,63,0.18) 52%, rgba(7,39,63,0.05) 57%, rgba(7,39,63,0) 62%);"
       aria-hidden="true"
     ></div>
 
