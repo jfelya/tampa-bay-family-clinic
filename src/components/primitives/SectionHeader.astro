@@ -1,0 +1,51 @@
+---
+/**
+ * Section heading in the MeCare-inspired style: uppercase eyebrow with a
+ * translucent highlight block, bold heading, accent bar, optional intro.
+ * Adapts to light/dark sections.
+ */
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  intro?: string;
+  align?: 'left' | 'center';
+  tone?: 'default' | 'light' | 'dark';
+  as?: 'h1' | 'h2' | 'h3';
+  class?: string;
+}
+
+const {
+  eyebrow,
+  heading,
+  intro,
+  align = 'center',
+  tone = 'default',
+  as: Tag = 'h2',
+  class: className = '',
+} = Astro.props;
+
+const isDark = tone === 'dark';
+---
+
+<div
+  class:list={[align === 'center' ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl', className]}
+  data-reveal
+>
+  {eyebrow && (
+    <span class:list={['section-eyebrow', isDark && '!text-white']}>{eyebrow}</span>
+  )}
+  <Tag
+    class:list={[
+      isDark ? 'text-white' : 'text-text',
+      eyebrow ? 'mt-4' : '',
+    ]}
+  >
+    {heading}
+  </Tag>
+  {align === 'center' && <span class="section-bar" aria-hidden="true"></span>}
+  {intro && (
+    <p class:list={['mt-5 text-lg', isDark ? 'text-white/80' : 'text-text-muted']}>
+      {intro}
+    </p>
+  )}
+</div>

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
 import Button from '../primitives/Button.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { requireAsset } from '../../lib/assets';
 
 interface Action {
@@ -25,12 +26,12 @@ const insurances = (await getCollection('insurances')).sort((a, b) => a.data.ord
 
 <Section background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container>
-    {heading && <h2 class="text-center">{heading}</h2>}
-    <ul class="mt-10 grid grid-cols-2 items-stretch gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+    {heading && <SectionHeader heading={heading} class="mb-12" />}
+    <ul class="reveal-stagger grid grid-cols-2 items-stretch gap-5 sm:grid-cols-3 lg:grid-cols-4">
       {insurances.map((insurance) => (
-        <li>
+        <li data-reveal>
           <div
-            class="flex h-full min-h-[104px] items-center justify-center rounded-lg border border-border bg-surface p-5 shadow-soft transition-all duration-200 ease-soft hover:scale-[1.04] hover:border-primary-200 hover:shadow-lift dark:hover:border-primary-800"
+            class="card-mecare flex h-full min-h-[112px] items-center justify-center p-5 transition-transform duration-300 ease-soft hover:scale-[1.04] hover:border-primary-200 hover:shadow-card-hover dark:hover:border-primary-800"
           >
             <img
               src={requireAsset(insurance.data.logo).src}
@@ -46,7 +47,7 @@ const insurances = (await getCollection('insurances')).sort((a, b) => a.data.ord
     </ul>
     {note && <p class="mt-6 text-center text-sm text-text-muted">{note}</p>}
     {action && (
-      <div class="mt-8 text-center">
+      <div class="mt-10 text-center" data-reveal>
         <Button href={action.href} variant={action.variant ?? 'ghost'} icon={action.icon as never}>
           {action.label}
         </Button>

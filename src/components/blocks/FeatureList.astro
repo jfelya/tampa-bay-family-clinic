@@ -1,6 +1,7 @@
 ---
 import Section from '../primitives/Section.astro';
 import Container from '../primitives/Container.astro';
+import SectionHeader from '../primitives/SectionHeader.astro';
 import { requireAsset } from '../../lib/assets';
 
 interface Item {
@@ -31,33 +32,47 @@ const colClasses = {
 <Section spacing={heading || intro ? 'md' : 'sm'} background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container>
     {(heading || intro) && (
-      <div class="mx-auto mb-10 max-w-2xl text-center">
-        {heading && <h2>{heading}</h2>}
-        {intro && <p class="mt-4 text-text-muted">{intro}</p>}
-      </div>
+      heading ? (
+        <SectionHeader heading={heading} intro={intro} class="mb-10" />
+      ) : (
+        <p class="mx-auto mb-10 max-w-2xl text-center text-text-muted">{intro}</p>
+      )
     )}
-    <ul class={`grid gap-6 ${colClasses[columns]}`}>
+    <ul class={`reveal-stagger grid gap-7 ${colClasses[columns]}`}>
       {items.map((item) => {
         const icon = item.image ? requireAsset(item.image) : undefined;
         const Tag = item.href ? 'a' : 'div';
         return (
-          <li>
+          <li data-reveal>
             <Tag
               href={item.href}
               class:list={[
-                'flex h-full items-start gap-4 rounded-lg border border-border bg-surface p-5 shadow-soft',
-                item.href &&
-                  'transition-all duration-200 ease-soft hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-lift dark:hover:border-primary-800',
+                'card-mecare flex h-full items-start gap-5 p-6',
+                item.href && 'card-mecare-hover group',
               ]}
             >
               {icon && (
-                <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-950">
-                  <img src={icon.src} alt="" width="32" height="32" class="h-8 w-8 object-contain" loading="lazy" />
+                <span class="icon-circle h-14 w-14">
+                  <img
+                    src={icon.src}
+                    alt=""
+                    width="32"
+                    height="32"
+                    class="h-8 w-8 object-contain"
+                    loading="lazy"
+                  />
                 </span>
               )}
               <span>
-                <span class="block font-heading text-lg font-bold text-text">{item.title}</span>
-                <span class="mt-1 block text-sm text-text-muted">{item.description}</span>
+                <span
+                  class:list={[
+                    'block font-heading text-lg font-bold text-text',
+                    item.href && 'transition-colors duration-300 group-hover:text-primary-700 dark:group-hover:text-primary-300',
+                  ]}
+                >
+                  {item.title}
+                </span>
+                <span class="mt-1.5 block text-sm leading-relaxed text-text-muted">{item.description}</span>
               </span>
             </Tag>
           </li>

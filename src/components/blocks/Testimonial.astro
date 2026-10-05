@@ -17,8 +17,14 @@ const imageData = image ? requireAsset(image) : undefined;
 
 <Section spacing="sm" background={tone === 'subtle' ? 'subtle' : 'default'} container="none">
   <Container size="narrow">
-    <figure class="text-center">
-      <blockquote class="whitespace-pre-line font-heading text-xl font-semibold leading-relaxed text-text lg:text-2xl">
+    <figure class="card-mecare relative mx-auto px-8 py-12 text-center sm:px-14" data-reveal>
+      <span
+        aria-hidden="true"
+        class="pointer-events-none absolute left-1/2 top-5 -translate-x-1/2 font-heading text-7xl font-extrabold leading-none text-primary-100 dark:text-primary-950"
+      >
+        &ldquo;
+      </span>
+      <blockquote class="relative whitespace-pre-line font-heading text-xl font-semibold leading-relaxed text-text lg:text-2xl">
         {quote}
       </blockquote>
       {imageData && (
@@ -28,7 +34,7 @@ const imageData = image ? requireAsset(image) : undefined;
             alt={imageAlt}
             widths={[227, 454]}
             loading="lazy"
-            class="mx-auto mt-6 h-14 w-auto opacity-90"
+            class="mx-auto mt-7 h-14 w-auto opacity-90"
           />
         </figcaption>
       )}

@@ -127,12 +127,17 @@
   /* Radii */
   --radius-sm: 6px;
   --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
 
-  /* Shadows */
+  /* Shadows — MeCare-inspired soft card system */
   --shadow-soft: 0 1px 2px rgb(2 6 23 / 0.06), 0 4px 12px rgb(2 6 23 / 0.08);
   --shadow-lift: 0 12px 32px rgb(2 6 23 / 0.12);
+  --shadow-card: 3px 4px 15px rgb(2 6 23 / 0.10);
+  --shadow-card-hover: 3px 8px 26px rgb(2 6 23 / 0.16);
+  --shadow-glow: 0 6px 18px rgb(0 105 167 / 0.32);
+  --shadow-glow-accent: 0 6px 18px rgb(247 190 0 / 0.38);
+  --shadow-glow-inverse: 0 6px 18px rgb(2 6 23 / 0.18);
 
   /* Layout */
   --container-content: 1200px;

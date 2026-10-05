@@ -72,7 +72,7 @@ const hasBackground = !isHome && Boolean(imageData);
     -->
     <div
       class="pointer-events-none absolute inset-0 hidden lg:block"
-      style="background: linear-gradient(to right, #07273f 0%, #07273f 18%, rgba(7,39,63,0.9) 28%, rgba(7,39,63,0.66) 38%, rgba(7,39,63,0.4) 46%, rgba(7,39,63,0.18) 52%, rgba(7,39,63,0.05) 57%, rgba(7,39,63,0) 62%);"
+      style="background: linear-gradient(to right, #07273f 0%, #07273f 48%, rgba(7,39,63,0.88) 54%, rgba(7,39,63,0.6) 59%, rgba(7,39,63,0.32) 63%, rgba(7,39,63,0.12) 67%, rgba(7,39,63,0) 72%);"
       aria-hidden="true"
     ></div>
 
@@ -83,7 +83,8 @@ const hasBackground = !isHome && Boolean(imageData);
     ></div>
 
     <Container class="relative w-full py-10 lg:py-12">
-      <div class="max-w-xl lg:max-w-2xl">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+        <div class="max-w-xl">
         {eyebrow && (
           <span class="inline-flex items-center rounded-full bg-accent-500 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-accent-950">
             {eyebrow}
@@ -126,6 +127,7 @@ const hasBackground = !isHome && Boolean(imageData);
             ))}
           </ul>
         )}
+        </div>
       </div>
     </Container>
   </section>
