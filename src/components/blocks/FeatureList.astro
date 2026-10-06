@@ -16,11 +16,19 @@ interface Props {
   heading?: string;
   intro?: string;
   columns?: 2 | 3 | 4;
+  descriptionMode?: 'visible' | 'hidden';
   items: Item[];
   tone?: 'default' | 'subtle';
 }
 
-const { heading, intro, columns = 3, items, tone = 'default' } = Astro.props;
+const {
+  heading,
+  intro,
+  columns = 3,
+  descriptionMode = 'visible',
+  items,
+  tone = 'default',
+} = Astro.props;
 
 const colClasses = {
   2: 'sm:grid-cols-2',
@@ -72,7 +80,14 @@ const colClasses = {
                 >
                   {item.title}
                 </span>
-                <span class="mt-1.5 block text-sm leading-relaxed text-text-muted">{item.description}</span>
+                {item.description &&
+                  (descriptionMode === 'hidden' ? (
+                    <span class="sr-only">{item.description}</span>
+                  ) : (
+                    <span class="mt-1.5 block text-sm leading-relaxed text-text-muted">
+                      {item.description}
+                    </span>
+                  ))}
               </span>
             </Tag>
           </li>

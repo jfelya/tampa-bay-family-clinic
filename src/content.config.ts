@@ -95,6 +95,9 @@ const section = z.discriminatedUnion('type', [
     heading: z.string().optional(),
     intro: z.string().optional(),
     columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).default(3),
+    // 'visible' renders the description under the title; 'hidden' keeps the
+    // text in the DOM (screen readers/SEO) but does not display it.
+    descriptionMode: z.enum(['visible', 'hidden']).default('visible'),
     items: z.array(
       z.object({
         title: z.string(),

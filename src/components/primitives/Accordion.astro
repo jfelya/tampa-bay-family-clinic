@@ -20,6 +20,7 @@ const { items, allowMultiple = false, defaultOpen, name = 'accordion', class: cl
 <div class={`space-y-3 ${className}`}>
   {items.map((item, index) => (
     <details
+      data-accordion
       name={allowMultiple ? undefined : `${name}-group`}
       open={defaultOpen === index}
       class="card-mecare group overflow-hidden open:border-primary-200 open:shadow-card-hover dark:open:border-primary-800"

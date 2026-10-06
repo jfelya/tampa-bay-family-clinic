@@ -13,8 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Cuidado Primario
-    image: legacy/wp-content-uploads-2022-06-Primary-Care-physician-doing-medical-checkup-on-patient-Tampa-2-2-f716dd01d7.webp
-    imageAlt: Médico de atención primaria realizando un chequeo médico a un paciente
+    image: legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-Primary-Clinic-88ff669c3a.webp
+    imageAlt: Atención primaria en Tampa Bay Family Clinic
     subheading: |-
       Nuestros proveedores de atención primaria gestionan los requisitos de salud del día a día. Una relación estable con un PCP lo mantiene a usted con costos médicos más bajos y más saludable. Nuestro PCP puede enseñarle métodos para ayudarlo a obtener atención más avanzada cuando la necesite, atenderle y mantenerle saludable.
 

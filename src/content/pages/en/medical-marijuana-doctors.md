@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Medical Marijuana Doctors
+    image: legacy/wp-content-uploads-2025-11-medical-marijuana-doctors-hero-img-a4a62cad8b.webp
+    imageAlt: Medical marijuana doctor consultation
 
   - type: richText
     container: default
@@ -56,13 +58,20 @@ sections:
     tone: subtle
   - type: featureList
     columns: 3
+    descriptionMode: hidden
     items:
       - title: Evaluate
-        description: ""
+        description: "The first move to getting your Tampa, Florida Medical Marijuana Card is to get certified by one of our Marijuana Doctors."
+        image: legacy/wp-content-uploads-2022-07-doctor-Tampa-Family-Clinics-icon-yellow-2-a7574cf85a.webp
+        imageAlt: Evaluate
       - title: Educate
-        description: ""
+        description: "After getting approved by one of our Florida marijuana doctors, we will teach you about the Tampa, Florida cannabis program and its laws."
+        image: legacy/wp-content-uploads-2022-07-prescripcion-medica-yellow-90da1361e6.webp
+        imageAlt: Educate
       - title: Medicate
-        description: ""
+        description: "After receiving your Florida Medical Marijuana Card you will be able to buy medical marijuana products at a rentable price when compared to recreational."
+        image: legacy/wp-content-uploads-2022-07-drop-cannabis-medicinal-66c212cfc3.webp
+        imageAlt: Medicate
     tone: default
   - type: contentSection
     heading: What You Get Using Tampa Bay Family Clinic

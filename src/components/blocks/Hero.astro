@@ -155,12 +155,12 @@ const hasBackground = !isHome && Boolean(imageData);
       </div>
     )}
 
-    <Container class="relative py-14 lg:py-20">
+    <Container class="relative py-8 lg:py-10">
       <div class="max-w-3xl" data-reveal>
         {eyebrow && <span class="section-eyebrow !text-white">{eyebrow}</span>}
         <h1 class="page-title mt-4 font-extrabold text-white">{heading}</h1>
         {subheading && (
-          <p class="lead-text mt-5 max-w-2xl whitespace-pre-line text-primary-100">{subheading}</p>
+          <p class="lead-text-sm mt-4 max-w-2xl whitespace-pre-line text-primary-100">{subheading}</p>
         )}
         {actions.length > 0 && (
           <div class="mt-8 flex flex-wrap gap-3">

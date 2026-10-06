@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Médicos de marihuana medicinal
+    image: legacy/wp-content-uploads-2025-11-medical-marijuana-doctors-hero-img-a4a62cad8b.webp
+    imageAlt: Consulta con médico de marihuana medicinal
 
   - type: richText
     container: default
@@ -56,13 +58,20 @@ sections:
     tone: subtle
   - type: featureList
     columns: 3
+    descriptionMode: hidden
     items:
       - title: Evaluarse
-        description: ""
+        description: "El primer paso para obtener su tarjeta de marihuana medicinal en Tampa, Florida, es obtener la certificación de uno de nuestros médicos de marihuana."
+        image: legacy/wp-content-uploads-2022-07-doctor-Tampa-Family-Clinics-icon-yellow-2-a7574cf85a.webp
+        imageAlt: Evaluarse
       - title: Educarse
-        description: ""
+        description: "Después de obtener la aprobación de uno de nuestros médicos de marihuana de Florida, le enseñaremos sobre el programa de cannabis de Tampa, Florida y sus leyes."
+        image: legacy/wp-content-uploads-2022-07-prescripcion-medica-yellow-90da1361e6.webp
+        imageAlt: Educarse
       - title: Medicarse
-        description: ""
+        description: "Después de recibir su Tarjeta de marihuana medicinal, podrá comprar productos de marihuana medicinal a un precio rentable en comparación con los recreativos."
+        image: legacy/wp-content-uploads-2022-07-drop-cannabis-medicinal-66c212cfc3.webp
+        imageAlt: Medicarse
     tone: default
   - type: contentSection
     heading: Lo que obtienes al usar los servicios de Tampa Bay Family Clinic

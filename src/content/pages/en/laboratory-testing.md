@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: On-site
     heading: LABORATORY TESTING
+    image: legacy/wp-content-uploads-2022-03-preparation-for-blood-test-with-beautiful-young-blond-woman.Tampa_-773bd98a46.webp
+    imageAlt: Blood draw for laboratory testing
 
   - type: richText
     container: default

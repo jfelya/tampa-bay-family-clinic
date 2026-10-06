@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Licencia de conducir
     heading: Examen físico DOT
+    image: legacy/wp-content-uploads-2022-03-driving-test-DOT-Tampa-Florida-hero-image-4a5ce8a37c.webp
+    imageAlt: Examen físico DOT para licencia de conducir
 
   - type: richText
     container: default
@@ -100,19 +102,6 @@ sections:
       ### Examen físico
 
       Su médico le hará muchas preguntas. También cubrirán muchas categorías diferentes para el examen físico, incluido el control de sus ojos, oídos, boca, corazón, columna vertebral y más para detectar cualquier condición médica.
-    images:
-      - src: legacy/wp-content-uploads-2022-03-1.1-4e6894b006.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-2.2-c7f3c059e1.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-3.3-84f756cb00.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-4.4-33001fe76a.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-5.5-1d8f3b3d30.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-6.6-e761d19df9.webp
-        alt: ""
     tone: subtle
   - type: contentSection
     heading: ¿Qué sucede si no tiene un certificado físico de DOT actualizado?

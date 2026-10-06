@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Pruebas de Covid-19
+    image: legacy/wp-content-uploads-2022-03-covid-19-testing-Tampa-Florida-2-5d3cdebbb1.webp
+    imageAlt: Pruebas de COVID-19
 
   - type: richText
     container: default

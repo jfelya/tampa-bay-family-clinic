@@ -13,8 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Primary Care
-    image: legacy/wp-content-uploads-2022-06-Primary-Care-physician-doing-medical-checkup-on-patient-Tampa-2-2-f716dd01d7.webp
-    imageAlt: Primary care physician doing a medical checkup on a patient
+    image: legacy/wp-content-uploads-2022-03-Tampa-Bay-Family-Clinic-Primary-Clinic-88ff669c3a.webp
+    imageAlt: Primary care at Tampa Bay Family Clinic
     subheading: |-
       Our primary care providers manage day-to-day health requirements. A stable relationship with a PCP keeps you lower medical costs and healthier. Our PCP can teach you methods to help you get more advanced care when you need it, treat you when you’re sick and stay healthy.
 

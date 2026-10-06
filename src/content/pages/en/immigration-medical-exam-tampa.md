@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Tampa Florida
     heading: Immigration Medical Exam
+    image: legacy/wp-content-uploads-2022-03-immigration-medical-exam-tampa-florida-a76edb5dd3.webp
+    imageAlt: Immigration medical exam
 
   - type: richText
     container: default

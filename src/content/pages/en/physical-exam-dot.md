@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: Driver's License
     heading: Physical Exam DOT
+    image: legacy/wp-content-uploads-2022-03-driving-test-DOT-Tampa-Florida-hero-image-4a5ce8a37c.webp
+    imageAlt: Driver's license DOT physical examination
 
   - type: richText
     container: default
@@ -104,19 +106,6 @@ sections:
       ### Physical Examination
 
       Your medical examiner will ask you many questions. They will also cover many different categories for the physical exam, including checking your eyes, ears, mouth, heart, spine, and more for any medical conditions.
-    images:
-      - src: legacy/wp-content-uploads-2022-03-1.1-4e6894b006.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-2.2-c7f3c059e1.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-3.3-84f756cb00.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-4.4-33001fe76a.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-5.5-1d8f3b3d30.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-6.6-e761d19df9.webp
-        alt: ""
     tone: subtle
   - type: contentSection
     heading: What If You Don't Have An Updated DOT Physical Certificate?

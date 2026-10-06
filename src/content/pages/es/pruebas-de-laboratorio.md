@@ -13,6 +13,8 @@ sections:
     variant: page
     eyebrow: En el Lugar
     heading: Pruebas de Laboratorio
+    image: legacy/wp-content-uploads-2022-03-preparation-for-blood-test-with-beautiful-young-blond-woman.Tampa_-773bd98a46.webp
+    imageAlt: Extracción de sangre para pruebas de laboratorio
 
   - type: richText
     container: default

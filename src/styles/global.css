@@ -119,6 +119,11 @@ html.drawer-open body {
     font-size: var(--fs-lead);
   }
 
+  /* Slightly smaller lead, used by the inner page heroes */
+  .lead-text-sm {
+    font-size: clamp(0.9375rem, 0.9rem + 0.3vw, 1.0625rem); /* 15 → 17 */
+  }
+
   .prose-tbfc {
     color: var(--text-muted);
     line-height: 1.7;
@@ -289,6 +294,27 @@ html.drawer-open body {
       opacity: 1;
       transform: none;
     }
+  }
+
+  /*
+   * Progressive enhancement: animate the whole panel height so the answer
+   * visibly "drops down". Uses ::details-content + interpolate-size, which
+   * browsers without support simply ignore (so it falls back to instant open).
+   */
+  details[data-accordion] {
+    interpolate-size: allow-keywords;
+  }
+
+  details[data-accordion]::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition:
+      block-size 0.32s var(--ease-soft),
+      content-visibility 0.32s allow-discrete;
+  }
+
+  details[data-accordion][open]::details-content {
+    block-size: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {
