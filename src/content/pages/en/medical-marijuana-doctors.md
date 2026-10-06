@@ -53,17 +53,14 @@ sections:
         description: Disease caused by an uncontrolled division of abnormal cells in a given part of the body.
       - title: Chronic pain
         description: Pain unrelated to cancer that persists beyond the usual course of disease or injury.
-        image: legacy/wp-content-uploads-2022-07-medical-doctor-holding-cannabis-leaf-bottle-cannabis-oil-white-wall-2-2b64ceaac5.webp
     tone: subtle
   - type: featureList
     columns: 3
     items:
       - title: Evaluate
         description: ""
-        image: legacy/wp-content-uploads-2022-07-prescripcion-medica-yellow-90da1361e6.webp
       - title: Educate
         description: ""
-        image: legacy/wp-content-uploads-2022-07-drop-cannabis-medicinal-66c212cfc3.webp
       - title: Medicate
         description: ""
     tone: default
@@ -97,17 +94,6 @@ sections:
       Minors must have recommendations from 2 physicians and consent from their legal guardian
 
       The state will send you your physical medical marijuana card once your application is approved
-    images:
-      - src: legacy/wp-content-uploads-2022-03-1.1-4e6894b006.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-2.2-c7f3c059e1.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-3.3-84f756cb00.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-4.4-33001fe76a.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-5.5-1d8f3b3d30.webp
-        alt: ""
     tone: default
   - type: contentSection
     heading: The Easiest Way to Acquire a Medical Marijuana Card

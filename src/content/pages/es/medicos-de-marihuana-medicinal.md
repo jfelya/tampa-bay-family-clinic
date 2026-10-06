@@ -53,17 +53,14 @@ sections:
         description: Enfermedad causada por una división descontrolada de células anormales en una parte determinada del cuerpo.
       - title: Dolor crónico
         description: Dolor no relacionado con el cáncer que persiste más allá del curso habitual de la enfermedad o lesión.
-        image: legacy/wp-content-uploads-2022-07-medical-doctor-holding-cannabis-leaf-bottle-cannabis-oil-white-wall-2-2b64ceaac5.webp
     tone: subtle
   - type: featureList
     columns: 3
     items:
       - title: Evaluarse
         description: ""
-        image: legacy/wp-content-uploads-2022-07-prescripcion-medica-yellow-90da1361e6.webp
       - title: Educarse
         description: ""
-        image: legacy/wp-content-uploads-2022-07-drop-cannabis-medicinal-66c212cfc3.webp
       - title: Medicarse
         description: ""
     tone: default
@@ -97,17 +94,6 @@ sections:
       Los menores deben tener recomendaciones de 2 médicos y consentimiento de su tutor legal.
 
       El estado le enviará su tarjeta física de marihuana medicinal una vez que se apruebe su solicitud
-    images:
-      - src: legacy/wp-content-uploads-2022-03-1.1-4e6894b006.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-2.2-c7f3c059e1.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-3.3-84f756cb00.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-4.4-33001fe76a.webp
-        alt: ""
-      - src: legacy/wp-content-uploads-2022-03-5.5-1d8f3b3d30.webp
-        alt: ""
     tone: default
   - type: contentSection
     heading: La Manera Más Fácil De Adquirir Una Tarjeta De Marihuana Medicinal
